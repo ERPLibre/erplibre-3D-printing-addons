@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem id="root_web_slicing_profile" name="Slicing Profile" sequence="20"
+              web_icon="web_slicing_profile,static/description/icon.png" />
+
+    <menuitem id="slicing_profile" action="slicing_profile_action_view_action_window" sequence="1"
+              name="Profile" parent="root_web_slicing_profile" />
+</odoo>

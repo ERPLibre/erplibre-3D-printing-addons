@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="slicing_server_view_form">
+        <field name="name">slicing.server_form</field>
+        <field name="model">slicing.server</field>
+        <field name="arch" type="xml">
+            <form string="Server Configuration For SuperSlicer">
+                <sheet>
+                    <group>
+                        <field name="ip"/>
+                    </group>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="slicing_server_view_tree">
+        <field name="name">slicing.server_tree</field>
+        <field name="model">slicing.server</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="ip"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="slicing_server_slicing_server_action_view_action_window">
+        <field name="name">Server For SuperSlicer</field>
+        <field name="res_model">slicing.server</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="slicing_profile_view_form" model="ir.ui.view">
+        <field name="name">slicing.profile_form</field>
+        <field name="model">slicing.profile</field>
+        <field name="arch" type="xml">
+            <form string="Profile Form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="perimeters"/>
+                    </group>
+                    <group>
+                        <field name="top_solid_layers"/>
+                    </group>
+                    <group>
+                        <field name="bottom_solid_layers"/>
+                    </group>
+                    <group>
+                        <field name="top_solid_min_thickness"/>
+                    </group>
+                    <group>
+                        <field name="bottom_solid_min_thickness"/>
+                    </group>
+                    <group>
+                        <field name="one_perimeter_top"/>
+                    </group>
+                    <group>
+                        <field name="min_width_top_surface"/>
+                    </group>
+                    <group>
+                        <field name="extra_perimeters_overhangs"/>
+                    </group>
+                    <group>
+                        <field name="extra_perimeters_odd_layers"/>
+                    </group>
+                    <group>
+                        <field name="layer_height"/>
+                    </group>
+                    <group>
+                        <field name="first_layer_height"/>
+                    </group>
+                    <group>
+                        <field name="resolution"/>
+                    </group>
+                    <group>
+                        <field name="model_precision"/>
+                    </group>
+                    <group>
+                        <field name="slice_closing_radius"/>
+                    </group>
+                    <group>
+                        <field name="remarks"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="slicing_profile_view_tree" model="ir.ui.view">
+        <field name="name">slicing.profile_tree</field>
+        <field name="model">slicing.profile</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="perimeters"/>
+                <field name="layer_height"/>
+                <field name="resolution"/>
+                <field name="model_precision"/>
+                <field name="create_date"/>
+                <field name="write_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <act_window
+            id="slicing_profile_action_view_action_window"
+            name="Profiles"
+            res_model="slicing.profile"
+            view_mode="tree,form"
+    />
+</odoo>

@@ -1,13 +1,15 @@
 {
-    "name": "Profils de tranchage",
+    "name": "Slicing Profiles",
     "category": "Manufacturing",
-    "summary": "Gestion des profils de tranchage",
+    "summary": "Slicing Profiles Management",
     "version": "12.0.1.0",
-    "author": "Jose",
+    "author": "Jose Normil",
     "license": "AGPL-3",
     "application": True,
     "data": [
         "security/ir.model.access.csv",
+        'views/profile.xml',
+        'views/menus.xml',
     ],
     "installable": True,
 }

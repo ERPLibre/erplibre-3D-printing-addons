@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="root_web_slicing_server"
+              name="Server For SuperSlicer"
+              sequence="20"
+              web_icon="web_slicing_server,static/description/icon.png"
+    />
+
+    <menuitem id="models"
+              name="Models"
+              sequence="1"
+              parent="root_web_slicing_server"
+    />
+
+    <menuitem id="slicing_server"
+              name="Server Configuration"
+              action="slicing_server_slicing_server_action_view_action_window"
+              sequence="1"
+              parent="models"
+    />
+
+</odoo>
