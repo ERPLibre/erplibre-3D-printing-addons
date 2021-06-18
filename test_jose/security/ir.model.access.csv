@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-test_access_user_types_/_internal_user,test Access User types / Internal User,model_test,base.group_user,1,1,1,1

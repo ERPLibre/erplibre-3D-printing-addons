@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<odoo>
-    <menuitem id="root_test_jose" sequence="20" web_icon="test_jose,static/description/icon.png" />
-
-    <menuitem id="models" name="Models" sequence="1" parent="root_test_jose" />
-
-    <menuitem id="test" action="test_test_action_view_action_window" sequence="1" parent="models" />
-</odoo>
