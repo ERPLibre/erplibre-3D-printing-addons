@@ -2,6 +2,12 @@
 
 ---
 
-#### Module for managing "common" slicing profiles (print settings) for the 3D printing order website.
+## LOGO
 
-With this module you can CREATE, UPDATE, DELETE a slicing profile.
+![](static/description/icon.png)
+
+#### Module for managing "_common_" slicing profiles (print settings) for the 3D printing order website.
+
+---
+
+You can CREATE, UPDATE, DELETE a slicing profile.
