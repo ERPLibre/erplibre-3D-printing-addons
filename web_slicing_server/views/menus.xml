@@ -2,22 +2,14 @@
 <odoo>
 
     <menuitem id="root_web_slicing_server"
-              name="Server For SuperSlicer"
+              name="SuperSlicer Server"
               sequence="20"
-              web_icon="web_slicing_server,static/description/icon.png"
-    />
-
-    <menuitem id="models"
-              name="Models"
-              sequence="1"
-              parent="root_web_slicing_server"
-    />
+              web_icon="web_slicing_server,static/description/icon.png"/>
 
     <menuitem id="slicing_server"
-              name="Server Configuration"
-              action="slicing_server_slicing_server_action_view_action_window"
+              name="SuperSlicer Server Information"
+              action="slicing_server_action_view_action_window"
               sequence="1"
-              parent="models"
-    />
+              parent="root_web_slicing_server"/>
 
 </odoo>
