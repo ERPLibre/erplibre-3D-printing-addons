@@ -11,5 +11,8 @@
         "views/profile.xml",
         "views/menus.xml",
     ],
+    "depends": [
+        "mail",
+    ],
     "installable": True,
 }

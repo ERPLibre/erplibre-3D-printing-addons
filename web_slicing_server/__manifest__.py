@@ -11,5 +11,8 @@
         "views/slicing_server.xml",
         "views/menus.xml",
     ],
+    "depends": [
+        "mail",
+    ],
     "installable": True,
 }

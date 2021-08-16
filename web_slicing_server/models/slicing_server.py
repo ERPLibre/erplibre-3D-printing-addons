@@ -4,6 +4,7 @@ from odoo import _, api, models, fields
 class SlicingServer(models.Model):
     _name = 'slicing.server'
     _description = 'SuperSlicer Server'
+    _inherit = "mail.thread"
     _sql_constraints = [('unique_ss_server', 'UNIQUE(name,address,port)',
                          'The SuperSlicer Server infos should be unique!')]
 

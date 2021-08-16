@@ -6,19 +6,17 @@
         <field name="arch" type="xml">
             <form string="Profile Form">
                 <sheet string="Profile Form">
-                    <div class="oe_title">
-                        <group>
-                            <group>
-                                <field name="image" class="oe_avatar"/>
-                            </group>
-                            <group>
-                                <label for="name" class="oe_edit_only" string="Profile Name"/>
-                                <h1>
-                                    <field name="name"/>
-                                </h1>
-                            </group>
-                        </group>
-                    </div>
+                    <group col="4">
+                        <field name="image" widget="image" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="name" string="Profile Name"/>
+                            </div>
+                            <h1>
+                                <field name="name" default_focus="1" placeholder="Name"/>
+                            </h1>
+                        </div>
+                    </group>
 
                     <notebook>
                         <page string="Print Settings">
@@ -505,7 +503,7 @@
                                     <separator string="Filament"/>
                                     <group>
                                         <group>
-                                            <field name="filament_colour"/>
+                                            <field name="filament_colour" widget="color"/>
                                             <field name="filament_diameter"/>
                                             <field name="extrusion_multiplier"/>
                                         </group>
@@ -758,7 +756,7 @@
                                         </group>
                                         <group>
                                             <field name="thumbnails_custom_color"/>
-                                            <field name="thumbnails_color"/>
+                                            <field name="thumbnails_color" widget="color"/>
                                         </group>
                                     </group>
                                     <separator string="Advanced"/>
@@ -871,7 +869,7 @@
                                 </page>
                                 <page string="Extruders">
                                     <field name="extruders">
-                                        <tree>
+                                        <tree string="Extruders count lines">
                                             <control>
                                                 <create string="Add an extruder"/>
                                             </control>
@@ -879,7 +877,7 @@
                                             <field name="nozzle_diameter"/>
                                             <field name="retract_lift"/>
                                             <field name="wipe"/>
-                                            <field name="extruder_colour"/>
+                                            <field name="extruder_colour" widget="color"/>
                                         </tree>
                                     </field>
                                 </page>
@@ -894,6 +892,10 @@
                     </notebook>
 
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
             </form>
         </field>
     </record>
