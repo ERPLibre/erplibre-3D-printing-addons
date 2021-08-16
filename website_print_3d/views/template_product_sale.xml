@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="product_without_qty" inherit_id="website_sale.product" customize_show="True" active="True"
+              name="Remove Quantity From Product Page">
+        <xpath expr="//div[hasclass('css_quantity')]" position="replace">
+            <div class=""/>
+        </xpath>
+    </template>
+    <!-- Add unit after product price in product details -->
+    <template id="p3d_product_detail_price" inherit_id="website_sale.product_price">
+        <xpath expr="//h4[hasclass('oe_price_h4')]//b[1]" position="replace">
+            <b class="oe_price" style="white-space: nowrap;" t-esc="combination_info['price']"
+               t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+            /
+            <span t-field="product.uom_id.name"/>
+        </xpath>
+    </template>
+    <!-- Add unit after product price in cart lines -->
+    <template id="p3d_product_cart_price" inherit_id="website_sale.cart_lines">
+        <xpath expr="//td[hasclass('td-price')]//span[1]" position="replace">
+            <span t-field="line.price_reduce_taxexcl" style="white-space: nowrap;"
+                  t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"
+                  groups="account.group_show_line_subtotals_tax_excluded"/>
+            /
+            <span t-field="line.product_id.uom_id.name"/>
+        </xpath>
+    </template>
+    <!-- Disable process checkout button until submit the model file-->
+    <template id="p3d_wizard_checkout" inherit_id="website_sale.cart">
+        <xpath expr="//div[hasclass('oe_cart')]//a[2]" position="attributes">
+            <attribute name="class">btn btn-primary float-right d-none d-xl-inline-block disabled</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('oe_cart')]//a[2]" position="attributes">
+            <attribute name="tabindex">-1</attribute>
+        </xpath>
+    </template>
+    <!-- Remove 'add one' & 'remove one' & disable qty input from cart lines  -->
+    <template id="cart_lines_1_qty" inherit_id="website_sale.cart_lines">
+        <xpath expr="//td[hasclass('td-qty')]//div[hasclass('input-group-prepend')]" position="replace">
+            <div class="input-group oe_website_spinner" contenteditable="false"/>
+            <!--/t[1]/t[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/a[2]-->
+        </xpath>
+        <xpath expr="//td[hasclass('td-qty')]//div[hasclass('input-group-append')]" position="replace">
+            <div class="input-group oe_website_spinner" contenteditable="false"/>
+            <!--/t[1]/t[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/a[2]-->
+        </xpath>
+        <xpath expr="//td[hasclass('td-qty')]/div[hasclass('css_quantity')]/input" position="attributes">
+            <attribute name="readonly">readonly</attribute>
+        </xpath>
+    </template>
+    <!-- Hide Cart Summary -->
+    <template id="p3d_cart_summary" inherit_id="website_sale.short_cart_summary">
+        <xpath expr="//div[hasclass('js_cart_summary')]" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+        <!-- Disable button also -->
+        <xpath expr="//div[hasclass('js_cart_summary')]//a[1]" position="attributes">
+            <attribute name="class">btn btn-secondary float-right d-none d-xl-inline-block disabled</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('js_cart_summary')]//a[1]" position="attributes">
+            <attribute name="tabindex">-1</attribute>
+        </xpath>
+    </template>
+
+    <template id="website_p3d_product_sale" inherit_id="website_sale.cart" name="Slice Model File">
+        <xpath expr="//div[hasclass('oe_cart')]" position="inside">
+            <div class="row" t-if="website_sale_order.order_line">
+                <div class="col-lg-12">
+                    <form t-att-action="'/slice-model'" method="post" enctype="multipart/form-data"
+                          class="mb32" name="p3d_slice_model" id="p3d_slice_model">
+                        <h3 class="text-center">Upload your model</h3>
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <t t-foreach="website_sale_order.website_order_line" t-as="order_line">
+                            <input type="hidden" name="p3d_profile_id"
+                                   t-att-value="order_line.product_id.profile.id"/>
+                        </t>
+                        <div class="input-group w-100">
+                            <input t-field="website_sale_order.model_file" name="model_file"
+                                   class="form-control" type="file"/>
+                            <div class="input-group-append">
+                                <a href="#" role="button" id="p3d_slice_model_submit" tabindex="-1"
+                                   class="btn btn-secondary a-submit disabled">Slice
+                                </a>
+                            </div>
+                        </div>
+                        <p class="help-text">AMF, OBJ, STL</p>
+                    </form>
+                </div>
+                <div class="col-lg-12" style="display:none">
+                    <div id="slicing_status">
+
+                    </div>
+                </div>
+                <div class="col-lg-12" style="display:none">
+                    <button class="btn btn-secondary" id="toggleFull">Full Screen</button>
+                    <div id="pgcode_viewer">
+                        <iframe src="" title="IFrame Test School http://10.0.0.40:7136" width="100%" height="500px"
+                                allowFullscreen="true" name="PGCodeViewerFrame"/>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

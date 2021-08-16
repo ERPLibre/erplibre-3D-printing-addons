@@ -1,7 +1,6 @@
-# Web Slicing Profile
+# Website Print 3D
 
 ---
 
-#### Module for managing "common" slicing profiles (print settings) for the 3D printing order website.
+### The module for ordering 3D printing in the website.
 
-With this module you can CREATE, UPDATE, DELETE a slicing profile.

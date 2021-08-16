@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem id="root_web_mainsail_klipper" name="Mainsail(Klipper)" sequence="20"
+              web_icon="web_mainsail_klipper,static/description/icon.png" />
+
+    <menuitem id="mainsail_klipper" action="mainsail_klipper_view_action_window" sequence="1"
+              name="Mainsail" parent="root_web_mainsail_klipper" />
+
+    <menuitem id="klipper_instances" action="klipper_klipper_view_action_window" sequence="2"
+              name="Klipper Instances" parent="root_web_mainsail_klipper" />
+</odoo>

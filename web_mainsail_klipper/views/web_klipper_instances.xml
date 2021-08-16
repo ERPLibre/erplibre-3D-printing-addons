@@ -1,0 +1,38 @@
+<odoo>
+    <record id="klipper_klipper_view_tree" model="ir.ui.view">
+        <field name="name">klipper.klipper_tree</field>
+        <field name="model">klipper.klipper</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="host"/>
+                <field name="port"/>
+                <field name="ready"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="klipper_klipper_view_form" model="ir.ui.view">
+        <field name="name">klipper.klipper_form</field>
+        <field name="model">klipper.klipper</field>
+        <field name="arch" type="xml">
+            <form string="Klipper Form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="host"/>
+                        <field name="port"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="klipper_klipper_view_action_window">
+        <field name="name">Klipper - Moonraker</field>
+        <field name="res_model">klipper.klipper</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
