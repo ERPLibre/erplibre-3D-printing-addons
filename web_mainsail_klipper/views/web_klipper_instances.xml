@@ -8,7 +8,7 @@
                 <field name="host"/>
                 <field name="port"/>
                 <field name="ready"/>
-                <field name="state"/>
+                <field name="printer_state"/>
             </tree>
         </field>
     </record>
