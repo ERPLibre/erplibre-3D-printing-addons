@@ -23,5 +23,5 @@ class P3DController(Controller):
             # superslicer server send each line with a finish message or close the connection
             # && return the gcode
             # pass the gcode to pgviewer
-            return f"Filename : {filename}. File size :."
+            return f"File : {filename} Uploaded."
         return "Hello"

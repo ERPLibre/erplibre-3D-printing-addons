@@ -916,7 +916,7 @@ msgstr "Décalage du ventilateur de l'extrudeuse"
 #. module: web_slicing_profile
 #: model:ir.model,name:web_slicing_profile.model_slicing_extruder
 msgid "Extruder for this Slicing Profile"
-msgstr ""
+msgstr "Extrudeuse pour ce Profil d'impression"
 
 #. module: web_slicing_profile
 #: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__extruder_offset
@@ -2673,7 +2673,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__profile
 #: model:ir.ui.menu,name:web_slicing_profile.slicing_profile
 msgid "Profile"
-msgstr ""
+msgstr "Profil d'impression"
 
 #. module: web_slicing_profile
 #: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
@@ -2688,12 +2688,12 @@ msgstr ""
 #. module: web_slicing_profile
 #: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
 msgid "Profile Name"
-msgstr ""
+msgstr "Nom du Profil d'impression"
 
 #. module: web_slicing_profile
 #: model:ir.actions.act_window,name:web_slicing_profile.slicing_profile_action_view_action_window
 msgid "Profiles"
-msgstr ""
+msgstr "Profils d'impression"
 
 #. module: web_slicing_profile
 #: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
@@ -2939,12 +2939,12 @@ msgstr "Couche"
 #. module: web_slicing_profile
 #: model:ir.ui.menu,name:web_slicing_profile.root_web_slicing_profile
 msgid "Slicing Profile"
-msgstr ""
+msgstr "Profil d'impression"
 
 #. module: web_slicing_profile
 #: model:ir.model,name:web_slicing_profile.model_slicing_profile
 msgid "Slicing Profile Settings"
-msgstr ""
+msgstr "Paramètres de Profil d'impression"
 
 #. module: web_slicing_profile
 #: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__slowdown_below_layer_time
@@ -3301,7 +3301,7 @@ msgstr ""
 #. module: web_slicing_profile
 #: sql_constraint:slicing.profile:0
 msgid "The profile name should be unique!"
-msgstr ""
+msgstr "Le nom du Profil d'impression doit être unique"
 
 #. module: web_slicing_profile
 #: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_deretract_speed
