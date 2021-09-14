@@ -62,6 +62,7 @@
         </xpath>
     </template>
 
+    <!-- Create the form and area to display the messages and the Gcode Viewer -->
     <template id="website_p3d_product_sale" inherit_id="website_sale.cart" name="Slice Model File">
         <xpath expr="//div[hasclass('oe_cart')]" position="inside">
             <div class="row" t-if="website_sale_order.order_line">
@@ -70,6 +71,8 @@
                           class="mb32" name="p3d_slice_model" id="p3d_slice_model">
                         <h3 class="text-center">Upload your model</h3>
                         <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <input type="hidden" name="website_sale_order_id"
+                                   t-att-value="website_sale_order.id"/>
                         <t t-foreach="website_sale_order.website_order_line" t-as="order_line">
                             <input type="hidden" name="p3d_profile_id"
                                    t-att-value="order_line.product_id.profile.id"/>
@@ -94,11 +97,399 @@
                 <div class="col-lg-12">
                     <button class="btn btn-secondary" id="toggleFull">Full Screen</button>
                     <div id="pgcode_viewer">
-                        <iframe src="" title="IFrame Test School" width="100%" height="500px"
+                        <iframe src="http://127.0.0.1:7136" id="iframegcode" title="IFrame Test School"
+                                width="100%" height="500px"
                                 allowFullscreen="true" name="PGCodeViewerFrame"/>
                     </div>
                 </div>
             </div>
+        </xpath>
+    </template>
+
+    <!-- Add Product's Profile details (simples & some advanced) -->
+    <template id="website_p3d_product_details" inherit_id="website_sale.product" name="Product's details">
+        <xpath expr="//div[@id='product_full_description']" position="before">
+            <section class="container s_tabs oe_custom_bg" id="p3d_product_full_spec">
+                <h3 class="text-center mb32">Specifications for
+                    <b><t t-esc="product.name"/></b>
+                </h3>
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2" id="p3d_product_specifications">
+                        <div class="card bg-100">
+                            <div class="card-header">
+                                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                                    <li class="nav-item">
+                                        <a aria-controls="nav_tabs_content_p3d_3"
+                                           aria-selected="true" class="nav-link o_default_snippet_text active show"
+                                           data-toggle="tab" href="#nav_tabs_content_p3d_3"
+                                           id="nav_tabs_link_p3d_3" role="tab"
+                                           title="Print settings specifications">Print Settings
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a aria-controls="nav_tabs_content_p3d_4" aria-selected="false"
+                                           class="nav-link o_default_snippet_text" data-toggle="tab"
+                                           href="#nav_tabs_content_p3d_4" id="nav_tabs_link_p3d_4"
+                                           role="tab" title="Filament settings specifications">Filament Settings
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a aria-controls="nav_tabs_content_p3d_5"
+                                           aria-selected="false"
+                                           class="nav-link o_default_snippet_text"
+                                           data-toggle="tab" href="#nav_tabs_content_p3d_5"
+                                           id="nav_tabs_link_p3d_5" role="tab"
+                                           title="Printer settings specifications">Printer Settings
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body tab-content">
+                                <div class="tab-pane fade active show" id="nav_tabs_content_p3d_3" role="tabpanel">
+                                    <h3 class="o_default_snippet_text">Print Settings</h3>
+                                    <table class="table table-striped table-sm table-hover">
+                                        <tr>
+                                            <th t-att-colspan="2" class="text-center">Perimeters and Shell</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Perimeters</th>
+                                            <td>
+                                                <t t-esc="product.profile.perimeters"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Spiral vase</th>
+                                            <td>
+                                                <t t-esc="product.profile.spiral_vase"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Solid layers Top</th>
+                                            <td>
+                                                <t t-esc="product.profile.top_solid_layers"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Solid layers Bottom</th>
+                                            <td>
+                                                <t t-esc="product.profile.bottom_solid_layers"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Minimum shell thickness Top</th>
+                                            <td>
+                                                <t t-esc="product.profile.top_solid_min_thickness"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Minimum shell thickness  Bottom</th>
+                                            <td>
+                                                <t t-esc="product.profile.bottom_solid_min_thickness"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Only one perimeter on Top surfaces</th>
+                                            <td>
+                                                <t t-esc="product.profile.only_one_perimeter_top"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Seam position</th>
+                                            <td>
+                                                <t t-esc="product.profile.seam_position"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th t-att-colspan="2" class="text-center">Slicing</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Base Layer height</th>
+                                            <td>
+                                                <t t-esc="product.profile.layer_height"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>First Layer height</th>
+                                            <td>
+                                                <t t-esc="product.profile.first_layer_height"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Model rounding precision</th>
+                                            <td>
+                                                <t t-esc="product.profile.model_precision"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Slice gap closing radius</th>
+                                            <td>
+                                                <t t-esc="product.profile.slice_closing_radius"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Curve smoothing Precision</th>
+                                            <td>
+                                                <t t-esc="product.profile.curve_smoothing_precision"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Curve smoothing Min convex angle</th>
+                                            <td>
+                                                <t t-esc="product.profile.curve_smoothing_angle_convex"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Curve smoothing Min concave angle</th>
+                                            <td>
+                                                <t t-esc="product.profile.curve_smoothing_angle_concave"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Curve smoothing Cutoff</th>
+                                            <td>
+                                                <t t-esc="product.profile.curve_smoothing_cutoff_dist"/>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th t-att-colspan="2" class="text-center">Infill</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Fill density</th>
+                                            <td>
+                                                <t t-esc="product.profile.fill_density"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Fill pattern</th>
+                                            <td>
+                                                <t t-esc="product.profile.fill_pattern"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Connection length</th>
+                                            <td>
+                                                <t t-esc="product.profile.infill_anchor_max"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Fill pattern Top</th>
+                                            <td>
+                                                <t t-esc="product.profile.top_fill_pattern"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Fill pattern Bottom</th>
+                                            <td>
+                                                <t t-esc="product.profile.bottom_fill_pattern"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Combine infill every : </th>
+                                            <td>
+                                                <t t-esc="product.profile.infill_every_layers"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Only infill where needed : </th>
+                                            <td>
+                                                <t t-esc="product.profile.infill_only_where_needed"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Supporting dense layer</th>
+                                            <td>
+                                                <t t-esc="product.profile.infill_dense"/>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th t-att-colspan="2" class="text-center">Skirt and Brim</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Loops (minimum)</th>
+                                            <td>
+                                                <t t-esc="product.profile.skirts"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Distance from object</th>
+                                            <td>
+                                                <t t-esc="product.profile.skirt_distance"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Skirt height</th>
+                                            <td>
+                                                <t t-esc="product.profile.skirt_height"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Draft shield</th>
+                                            <td>
+                                                <t t-esc="product.profile.draft_shield"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Brim width</th>
+                                            <td>
+                                                <t t-esc="product.profile.brim_width"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Brim inside holes</th>
+                                            <td>
+                                                <t t-esc="product.profile.brim_inside_holes"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Interior Brim width</th>
+                                            <td>
+                                                <t t-esc="product.profile.brim_width_interior"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Brim ears</th>
+                                            <td>
+                                                <t t-esc="product.profile.brim_ears"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade" id="nav_tabs_content_p3d_4" role="tabpanel">
+                                    <h3 class="o_default_snippet_text">Filament Settings</h3>
+                                    <table class="table table-striped table-sm table-hover">
+                                        <tr>
+                                            <th t-att-colspan="2" class="text-center">Filament</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Color</th>
+                                            <td>
+                                                <t t-esc="product.profile.filament_colour" t-options="{'widget': 'color'}"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Diameter</th>
+                                            <td>
+                                                <t t-esc="product.profile.filament_diameter"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Extrusion multiplier</th>
+                                            <td>
+                                                <t t-esc="product.profile.extrusion_multiplier"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Density</th>
+                                            <td>
+                                                <t t-esc="product.profile.filament_density"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Filament type</th>
+                                            <td>
+                                                <t t-esc="product.profile.filament_type"/>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th t-att-colspan="2" class="text-center">Cooling</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Fan always on</th>
+                                            <td>
+                                                <t t-esc="product.profile.fan_always_on"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Default fan speed</th>
+                                            <td>
+                                                <t t-esc="product.profile.min_fan_speed"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Bridges fan speed</th>
+                                            <td>
+                                                <t t-esc="product.profile.bridge_fan_speed"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Top fan speed</th>
+                                            <td>
+                                                <t t-esc="product.profile.top_fan_speed"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>External perimeter fan speed</th>
+                                            <td>
+                                                <t t-esc="product.profile.external_perimeter_fan_speed"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Max fan speed</th>
+                                            <td>
+                                                <t t-esc="product.profile.max_fan_speed"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade" id="nav_tabs_content_p3d_5" role="tabpanel">
+                                    <h3 class="o_default_snippet_text">Printer Settings</h3>
+                                    <table class="table table-striped table-sm table-hover">
+                                        <tr>
+                                            <th t-att-colspan="2" class="text-center">General</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Bed shape</th>
+                                            <td>
+                                                <t t-esc="product.profile.bed_shape"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Max print height</th>
+                                            <td>
+                                                <t t-esc="product.profile.max_print_height"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Extruders</th>
+                                            <td>
+                                                <t t-esc="product.profile.extruders_count"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Milling cutters</th>
+                                            <td>
+                                                <t t-esc="product.profile.milling_count"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Gcode flavor</th>
+                                            <td>
+                                                <t t-esc="product.profile.gcode_flavor"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Supports stealth mode</th>
+                                            <td>
+                                                <t t-esc="product.profile.silent_mode"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Fan PWM from 0-100</th>
+                                            <td>
+                                                <t t-esc="product.profile.fan_percentage"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
         </xpath>
     </template>
 </odoo>

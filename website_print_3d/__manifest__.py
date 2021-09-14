@@ -12,8 +12,6 @@
     "license": "AGPL-3",
     "application": True,
     "data": [
-        # "security/ir.model.access.csv",
-        # "views/profile.xml",
         "views/template_product_sale.xml",
         "views/p3d_product_form.xml",
         "views/assets.xml",
@@ -23,10 +21,10 @@
         "web_slicing_server",
         "mail", "website_sale",
     ],
-    # "external_dependencies": {
-    #     "python": [
-    #         "request", "os"
-    #     ]
-    # },
+    "external_dependencies": {
+        "python": [
+            "requests", "os", "orjson", "re", "math", "datetime"
+        ]
+    },
     "installable": True,
 }

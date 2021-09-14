@@ -32,6 +32,24 @@ class Extruder(models.Model):
         digits=(1, 2),
     )
 
+    extruder_fan_offset = fields.Char(
+        string="Extruder fan offset",
+        help="",
+        default="0%",
+    )
+
+    extruder_temperature_offset = fields.Integer(
+        string="Extruder temperature offset",
+        help="",
+        default=0,
+    )
+
+    tool_name = fields.Char(
+        string="Tool name",
+        help="",
+        default="",
+    )
+
     extruder_offset = fields.Char(
         string="Extruder offset (X*Y)",
         help="",
@@ -87,6 +105,13 @@ class Extruder(models.Model):
         default=0,
     )
 
+    retract_restart_extra = fields.Integer(
+        string="Retract restart extra",
+        help="When the retraction is compensated after the travel move, the extruder will push "
+             "this additional amount of filament. This setting is rarely needed. (mm, default: 0)",
+        default=0,
+    )
+
     retract_before_travel = fields.Integer(
         string="Retract before travel",
         help="",
@@ -117,10 +142,31 @@ class Extruder(models.Model):
         default=0,
     )
 
+    retract_length_toolchange = fields.Integer(
+        string="Retract length toolchange",
+        help="When retraction is triggered before changing tool, filament is pulled back by "
+             "the specified amount (the length is measured on raw filament, before it enters "
+             "the extruder). (mm (zero to disable), default: 10)",
+        default=10,
+    )
+
+    retract_restart_extra_toolchange = fields.Integer(
+        string="Retract restart extra toolchange",
+        help="When the retraction is compensated after changing tool, the extruder will push "
+             "this additional amount of filament. (mm, default: 0)",
+        default=0,
+    )
+
     extruder_colour = fields.Char(
         string="Extruder colour",
         help="",
         default="",
+    )
+
+    gcode_precision_e = fields.Integer(
+        string="Gcode precision e",
+        help="",
+        default=5,
     )
 
     profile = fields.Many2one(

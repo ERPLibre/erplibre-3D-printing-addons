@@ -2,12 +2,15 @@
 
 ---
 
-## LOGO
-
 ![](static/description/icon.png)
 
-#### Module for managing "_common_" slicing profiles (print settings) for the 3D printing order website.
+### The module for managing slicing profiles for the 3D printing order website.
 
 ---
 
-You can CREATE, UPDATE, DELETE a slicing profile.
+## What is a _Profile_ ?
+
+a **_Profile_** provides the settings (parameters) for the slicing application.
+It contains information for the **Print Settings**, **Filament Settings** and 
+**Printer Settings**. These are all the information needed by _SuperSlicer_ used
+in this project.

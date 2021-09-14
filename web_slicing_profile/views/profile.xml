@@ -264,7 +264,7 @@
                                             <field name="support_material_contact_distance_type"/>
                                             <field name="support_material_contact_distance_top"/>
                                             <field name="support_material_contact_distance_bottom"/>
-                                            <field name="support_material_interface_pattern"/>
+                                            <field name="support_material_pattern"/>
                                             <field name="support_material_with_sheath"/>
                                             <field name="support_material_spacing"/>
                                         </group>
@@ -734,7 +734,6 @@
                                         </group>
                                         <group>
                                             <field name="gcode_precision_xyz"/>
-                                            <field name="gcode_precision_e"/>
                                         </group>
                                     </group>
                                     <separator string="Cooling fan"/>
@@ -874,11 +873,63 @@
                                                 <create string="Add an extruder"/>
                                             </control>
                                             <field name="id"/>
+                                            <field name="tool_name"/>
                                             <field name="nozzle_diameter"/>
-                                            <field name="retract_lift"/>
                                             <field name="wipe"/>
+                                            <field name="extruder_temperature_offset"/>
+                                            <field name="extruder_fan_offset"/>
+                                            <field name="gcode_precision_e"/>
                                             <field name="extruder_colour" widget="color"/>
                                         </tree>
+                                        <form string="Create Extruder">
+                                            <sheet string="Create Extruder">
+                                                <group>
+                                                    <group>
+                                                        <separator string="Name and Size"/>
+                                                        <field name="tool_name"/>
+                                                        <field name="nozzle_diameter"/>
+
+                                                        <separator string="Layer height limits"/>
+                                                        <field name="min_layer_height"/>
+                                                        <field name="max_layer_height"/>
+
+                                                        <separator string="Offsets (for multi-extruder printers)"/>
+                                                        <field name="extruder_offset"/>
+                                                        <field name="extruder_temperature_offset"/>
+                                                        <field name="extruder_fan_offset"/>
+
+                                                        <separator
+                                                                string="Retraction when tool is disabled
+                                                                (advanced settings for multi-extruder setups)"/>
+                                                        <field name="retract_length_toolchange"/>
+                                                        <field name="retract_restart_extra_toolchange"/>
+
+                                                        <separator string="Preview"/>
+                                                        <field name="extruder_colour" widget="color"/>
+
+                                                        <separator string="Gcode"/>
+                                                        <field name="gcode_precision_e"/>
+                                                    </group>
+                                                    <group>
+                                                        <separator string="Retraction"/>
+                                                        <field name="retract_length"/>
+                                                        <field name="retract_lift"/>
+                                                        <field name="retract_lift_above"/>
+                                                        <field name="retract_lift_below"/>
+                                                        <field name="retract_lift_first_layer"/>
+                                                        <field name="retract_lift_top"/>
+                                                        <field name="retract_speed"/>
+                                                        <field name="deretract_speed"/>
+                                                        <field name="retract_restart_extra"/>
+                                                        <field name="retract_before_travel"/>
+                                                        <field name="retract_layer_change"/>
+                                                        <field name="wipe"/>
+                                                        <field name="retract_before_wipe"/>
+                                                        <field name="wipe_extra_perimeter"/>
+                                                    </group>
+                                                </group>
+                                            </sheet>
+                                        </form>
                                     </field>
                                 </page>
                                 <page string="Notes">

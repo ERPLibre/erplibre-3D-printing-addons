@@ -37,4 +37,4 @@ class Profile3DSale(models.Model):
     def website_check_file(self, filename):
         if mimetypes.guess_extension(filename) not in [".stl", ".obj", ".amf"]:
             return {"message":
-                    {"type": "error", "info": "Incorrect file type. Please choose an STL or an OBJ or an AMF file!"}}
+                    {"type": "error", "info": "Incorrect file type. Please choose an STL or OBJ or AMF file!"}}

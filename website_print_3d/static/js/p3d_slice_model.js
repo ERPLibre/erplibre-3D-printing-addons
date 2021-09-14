@@ -4,11 +4,12 @@ odoo.define('website.slice_model', ['web.ajax'], function (require) {
     var filename = '';
     var Ajax = require('web.ajax');
     var showMessage = function (data) {
-        $("#slicing_status").append('<p class="message"><b>' + data + '</p>');
-        //for JSON
-        // for (var x in data) {
-        //     $("#slicing_status").append('<p class="message"><b>' + data[x] + '</p>');
-        // }
+        if (typeof data === "object") {
+            $("#slicing_status").append('<p class="message">' + data['message'] + '</p>');
+            // $("input[type='text']").val(1000);
+        } else {
+            $("#slicing_status").append('<p class="message">' + data + '</p>');
+        }
     }
     $(function () {
         $("button#toggleFull").on('click', function () {
@@ -22,6 +23,7 @@ odoo.define('website.slice_model', ['web.ajax'], function (require) {
                 alert("Incorrect file type. Please choose an STL or OBJ or AMF file!")
             }
         });
+        //Submit the form to the SuperSlicer Server
         $("#p3d_slice_model").on('submit', function (e) {
             e.preventDefault();
             var form = $(this);
@@ -38,7 +40,10 @@ odoo.define('website.slice_model', ['web.ajax'], function (require) {
                     form_values[input.name] = file;
                 });
             });
-            var ws = new WebSocket("ws://10.0.0.40:5000/slicing/status/Hex_Rook"), data;
+            var base_name = filename.split('.')[0];
+            //Websocket connection : not working as wanted
+            /*var ws_url = "ws://127.0.0.1:5000/slicing/status/" + base_name;
+            var ws = new WebSocket(ws_url), data;
             ws.onopen = function () {
                 console.log("Connected...");
             };
@@ -49,19 +54,22 @@ odoo.define('website.slice_model', ['web.ajax'], function (require) {
             };
             ws.onclose = function () {
                 console.log("Closed!");
-            };
-            var messageFile = "Uploading file" + filename + " to Server ...";
+            };*/
+            var messageFile = "Uploading file " + filename + " to Server ...";
             showMessage(messageFile);
+            var gcode_url = "http://127.0.0.1:5000/files/gcode/" + base_name + ".gcode";
 
             Ajax.post($(this).attr("action"), form_values).then(function (data) {
-                //http://10.0.0.40:7136
-                showMessage(data);
-                $("iframe[name='PGCodeViewerFrame']").attr('src', 'http://10.0.0.40:7136');
+                //Display the response text from the SuperSlicer Server
+                showMessage(JSON.parse(data));
+                //ReActivate the summary and the buttons
                 $("div[class*='js_cart_summary']").show();
                 $("a[href*='/shop/checkout']").removeClass("disabled");
-                setTimeout(function(){
-                    $("iframe[name='PGCodeViewerFrame']").contentWindow.window.uploadGcode("http://10.0.0.40:5000/files/gcode/Hex_Queen.gcode");
-                    }, 10000);
+                //Load the Gcode from the URL
+                document.getElementById('iframegcode').contentWindow
+                    .postMessage(gcode_url, '*');
+            }, function (error) {
+                alert(error.statusText);
             });
         });
     });

@@ -49,7 +49,7 @@ msgstr "Intervention nécessaire"
 #. module: web_slicing_profile
 #: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
 msgid "Add an extruder"
-msgstr "Ajouter un extrudeur"
+msgstr "Ajouter une extrudeuse"
 
 #. module: web_slicing_profile
 #: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__extra_perimeters_overhangs
@@ -591,16 +591,6 @@ msgid ""
 " this. Bridges will be infilled using the best direction Slic3r can detect, "
 "so this setting does not affect them. (°, default: 45)"
 msgstr ""
-
-#. module: web_slicing_profile
-#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__default_filament_profile
-msgid "Default filament profile"
-msgstr "Profil de filament par défaut"
-
-#. module: web_slicing_profile
-#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__default_print_profile
-msgid "Default print profile"
-msgstr "Profil de filament par défaut"
 
 #. module: web_slicing_profile
 #: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__fill_density

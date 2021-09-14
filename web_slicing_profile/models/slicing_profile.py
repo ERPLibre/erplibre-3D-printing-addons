@@ -8,6 +8,35 @@ class SlicingProfile(models.Model):
     _description = "Slicing Profile Settings"
     _sql_constraints = [('unique_name', 'UNIQUE(name)', 'The profile name should be unique!')]
 
+    def _datadict(self):
+        # Remove unnecessary parameters from the Profile
+        attr = [a for a in dir(self) if not a.startswith('_') and not a.startswith('id') and not a.startswith('create_')
+                and 'lambda' not in a and 'CONCURRENCY' not in a and not a.startswith('write_')
+                and not a.startswith('message') and not a.startswith('website') and not a.startswith('image')
+                and 'note' not in a and not a.startswith('display') and not a.startswith('extruders_count')
+                and not a.startswith('milling_count') and 'name' not in a and not a.startswith('no_perimeter_')
+                and not callable(getattr(self, a))]
+        data = {}
+        for a in attr:
+            if a != "extruders":
+                data[f'{a}'] = getattr(self, a)
+            else:
+                list_extruders = self.extruders
+                count = 1
+                data[f'{a}'] = {}
+                for ext in list_extruders:
+                    attr_ex = [a_ex for a_ex in dir(ext) if not a_ex.startswith('_') and not a_ex.startswith('id')
+                               and 'lambda' not in a_ex and 'CONCURRENCY' not in a_ex and not a_ex.startswith('create_')
+                               and not a_ex.startswith('write_') and 'profile' not in a_ex and 'note' not in a_ex
+                               and not a_ex.startswith('display') and 'name' not in a_ex
+                               and not callable(getattr(ext, a_ex))]
+                    data_ex = {}
+                    for a_ex in attr_ex:
+                        data_ex[f'{a_ex}'] = getattr(ext, a_ex)
+                    data[f'{a}'][f'{count}'] = data_ex
+                    count += 1
+        return data
+
     @api.model
     def _get_algo_selection(self):
         return [("none", "Disabled"),
@@ -440,7 +469,7 @@ class SlicingProfile(models.Model):
     external_perimeter_extrusion_width = fields.Char(
         string="External perimeter extrusion width",
         help="",
-        default="",
+        default="105%",
     )
 
     external_perimeter_overlap = fields.Char(
@@ -533,7 +562,7 @@ class SlicingProfile(models.Model):
     extrusion_width = fields.Char(
         string="Extrusion width",
         help="",
-        default="",
+        default="116%",
     )
 
     fill_angle = fields.Integer(
@@ -833,7 +862,7 @@ class SlicingProfile(models.Model):
     infill_extrusion_width = fields.Char(
         string="Infill extrusion width",
         help="",
-        default="",
+        default="111%",
     )
 
     infill_first = fields.Integer(
@@ -860,12 +889,6 @@ class SlicingProfile(models.Model):
         string="Infill speed",
         help="",
         default=80,
-    )
-
-    inherits = fields.Char(
-        string="Inherits",
-        help="",
-        default="",
     )
 
     interface_shells = fields.Boolean(
@@ -1110,7 +1133,7 @@ class SlicingProfile(models.Model):
     perimeter_extrusion_width = fields.Char(
         string="Perimeter extrusion width",
         help="",
-        default="",
+        default="116%",
     )
 
     perimeter_loop = fields.Boolean(
@@ -1180,12 +1203,6 @@ class SlicingProfile(models.Model):
         help="",
         default=-1,
         digits=(1, 0),
-    )
-
-    print_settings_id = fields.Char(
-        string="Print settings id",
-        help="",
-        default="",
     )
 
     print_temperature = fields.Integer(
@@ -1329,7 +1346,7 @@ class SlicingProfile(models.Model):
     solid_infill_extrusion_width = fields.Char(
         string="Solid infill extrusion width",
         help="",
-        default="",
+        default="116%",
     )
 
     solid_infill_speed = fields.Integer(
@@ -1560,12 +1577,6 @@ class SlicingProfile(models.Model):
         default=30,
     )
 
-    threads = fields.Integer(
-        string="Threads",
-        help="",
-        default=8,
-    )
-
     top_fill_pattern = fields.Selection(
         selection='_get_top_pattern_selection',
         string="Top fill pattern",
@@ -1585,7 +1596,7 @@ class SlicingProfile(models.Model):
     top_infill_extrusion_width = fields.Char(
         string="Top infill extrusion width",
         help="",
-        default="",
+        default="111%",
     )
 
     top_solid_infill_speed = fields.Integer(
@@ -1983,12 +1994,6 @@ class SlicingProfile(models.Model):
         default="",
     )
 
-    filament_settings_id = fields.Char(
-        string="Filament settings id",
-        help="",
-        default="",
-    )
-
     filament_shrink = fields.Char(
         string="Filament shrink",
         help="Enter the shrinkage percentage that the filament will get after cooling (94% if "
@@ -2079,12 +2084,6 @@ class SlicingProfile(models.Model):
         string="Filament use skinnydip",
         help="Skinnydip performs a secondary dip into the meltzone to burn off fine strings of filament (default: 0)",
         default=False,
-    )
-
-    filament_vendor = fields.Char(
-        string="Filament vendor",
-        help="",
-        default="(Unknown)",
     )
 
     filament_wipe = fields.Boolean(
@@ -2233,18 +2232,6 @@ class SlicingProfile(models.Model):
         digits=(1, 2),
     )
 
-    default_filament_profile = fields.Char(
-        string="Default filament profile",
-        help="",
-        default="",
-    )
-
-    default_print_profile = fields.Char(
-        string="Default print profile",
-        help="",
-        default="",
-    )
-
     end_gcode = fields.Text(
         string="End gcode",
         help="",
@@ -2259,18 +2246,6 @@ class SlicingProfile(models.Model):
              "unloading. (mm, default: _2)",
         default=-2,
         digits=(1, 0),
-    )
-
-    extruder_fan_offset = fields.Char(
-        string="Extruder fan offset",
-        help="",
-        default="0%",
-    )
-
-    extruder_temperature_offset = fields.Integer(
-        string="Extruder temperature offset",
-        help="",
-        default=0,
     )
 
     extruders_count = fields.Integer(
@@ -2314,12 +2289,6 @@ class SlicingProfile(models.Model):
         string="G-code flavor",
         help="",
         default="marlin",
-    )
-
-    gcode_precision_e = fields.Integer(
-        string="Gcode precision e",
-        help="",
-        default=5,
     )
 
     gcode_precision_xyz = fields.Integer(
@@ -2513,26 +2482,8 @@ class SlicingProfile(models.Model):
         default="M601",
     )
 
-    print_host = fields.Char(
-        string="Print host",
-        help="",
-        default="",
-    )
-
-    printer_model = fields.Char(
-        string="Printer model",
-        help="",
-        default="",
-    )
-
     printer_notes = fields.Text(
         string="Printer notes",
-        help="",
-        default="",
-    )
-
-    printer_settings_id = fields.Char(
-        string="Printer settings id",
         help="",
         default="",
     )
@@ -2543,62 +2494,10 @@ class SlicingProfile(models.Model):
         default="FFF",
     )
 
-    printer_variant = fields.Char(
-        string="Printer variant",
-        help="",
-        default="",
-    )
-
-    printer_vendor = fields.Char(
-        string="Printer vendor",
-        help="",
-        default="",
-    )
-
-    printhost_apikey = fields.Char(
-        string="Printhost apikey",
-        help="",
-        default="",
-    )
-
-    printhost_cafile = fields.Char(
-        string="Printhost cafile",
-        help="",
-        default="",
-    )
-
-    printhost_port = fields.Char(
-        string="Printhost port",
-        help="",
-        default="",
-    )
-
     remaining_times = fields.Boolean(
         string="Remaining times",
         help="",
         default=False,
-    )
-
-    retract_length_toolchange = fields.Integer(
-        string="Retract length toolchange",
-        help="When retraction is triggered before changing tool, filament is pulled back by "
-             "the specified amount (the length is measured on raw filament, before it enters "
-             "the extruder). (mm (zero to disable), default: 10)",
-        default=10,
-    )
-
-    retract_restart_extra = fields.Integer(
-        string="Retract restart extra",
-        help="When the retraction is compensated after the travel move, the extruder will push "
-             "this additional amount of filament. This setting is rarely needed. (mm, default: 0)",
-        default=0,
-    )
-
-    retract_restart_extra_toolchange = fields.Integer(
-        string="Retract restart extra toolchange",
-        help="When the retraction is compensated after changing tool, the extruder will push "
-             "this additional amount of filament. (mm, default: 0)",
-        default=0,
     )
 
     silent_mode = fields.Boolean(
@@ -2659,12 +2558,6 @@ class SlicingProfile(models.Model):
         string="Time estimation compensation",
         help="",
         default="100%",
-    )
-
-    tool_name = fields.Char(
-        string="Tool name",
-        help="",
-        default="",
     )
 
     toolchange_gcode = fields.Text(

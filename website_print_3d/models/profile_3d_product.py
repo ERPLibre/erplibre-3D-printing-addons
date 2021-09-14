@@ -12,4 +12,5 @@ class Profile3DProduct(models.Model):
         comodel_name="slicing.profile",
         string="Profile",
         default=lambda self: self.env['slicing.profile'],
+        required=True,
     )
