@@ -23,10 +23,10 @@ Those addons help link ERPLibre with Mainsail/Klipper and SuperSlicer.
 
 ---
 
-After installation of the modules, 4 port redirection are required on the machine used for the connections :
+After installation of the modules, 4 ports forwarding (ssh forwarding) are required on the machine used for the connections :
 - **8069** : allow connection to ERPLibre
 - **7136** : allow connection to the G-Code Viewer (PGcode Viewer)
 - **7125** : allow connection to the websocket of the printer linked with that G-Code Viewer instance
 - **5000** : allow connection to the SuperSlicer Server
 
-**N.B.** : Those redirections can be on the same Domain (IP). (Example : 127.0.0.1)
+**N.B.** : Those forwarding can be on the same Domain (IP). (Example : 127.0.0.1)
