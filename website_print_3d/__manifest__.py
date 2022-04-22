@@ -19,12 +19,9 @@
     "depends": [
         "web_slicing_profile",
         "web_slicing_server",
-        "mail", "website_sale",
+        "mail",
+        "website_sale",
     ],
-    "external_dependencies": {
-        "python": [
-            "requests", "orjson"
-        ]
-    },
+    "external_dependencies": {"python": ["requests", "orjson"]},
     "installable": True,
 }

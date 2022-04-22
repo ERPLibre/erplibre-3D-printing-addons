@@ -28,7 +28,6 @@
         </field>
     </record>
 
-
     <record model="ir.actions.act_window" id="mainsail_klipper_view_action_window">
         <field name="name">Mainsail - Klipper</field>
         <field name="res_model">mainsail.klipper</field>

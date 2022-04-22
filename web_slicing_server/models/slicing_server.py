@@ -1,12 +1,17 @@
-from odoo import _, api, models, fields
+from odoo import _, api, fields, models
 
 
 class SlicingServer(models.Model):
-    _name = 'slicing.server'
-    _description = 'SuperSlicer Server'
+    _name = "slicing.server"
+    _description = "SuperSlicer Server"
     _inherit = "mail.thread"
-    _sql_constraints = [('unique_ss_server', 'UNIQUE(name,address,port)',
-                         'The SuperSlicer Server infos should be unique!')]
+    _sql_constraints = [
+        (
+            "unique_ss_server",
+            "UNIQUE(name,address,port)",
+            "The SuperSlicer Server infos should be unique!",
+        )
+    ]
 
     address = fields.Char(
         string="IP Address",
@@ -17,7 +22,7 @@ class SlicingServer(models.Model):
     )
 
     port = fields.Integer(
-        string='Port',
+        string="Port",
         help="Listening port of the SuperSlicer Server",
         required=True,
         default=5000,
@@ -38,11 +43,13 @@ class SlicingServer(models.Model):
         index=True,
     )
 
-    @api.onchange('default_server')
+    @api.onchange("default_server")
     def _onchange_default_server(self):
         if self.default_server:
-            result = self.search([('default_server', '=', True)], limit=1)
-            result.write({'default_server': False})
+            result = self.search([("default_server", "=", True)], limit=1)
+            result.write({"default_server": False})
         else:
-            result = self.search([('default_server', '=', False)], order='id', limit=1)
-            result.write({'default_server': True})
+            result = self.search(
+                [("default_server", "=", False)], order="id", limit=1
+            )
+            result.write({"default_server": True})

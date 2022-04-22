@@ -1,4 +1,4 @@
-from odoo import _, api, models, fields
+from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -11,6 +11,6 @@ class Profile3DProduct(models.Model):
     profile = fields.Many2one(
         comodel_name="slicing.profile",
         string="Profile",
-        default=lambda self: self.env['slicing.profile'],
+        default=lambda self: self.env["slicing.profile"],
         required=True,
     )

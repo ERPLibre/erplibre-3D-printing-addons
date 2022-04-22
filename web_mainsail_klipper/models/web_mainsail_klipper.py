@@ -1,9 +1,11 @@
-from odoo import _, api, models, fields
+from odoo import _, api, fields, models
 
 
 class MainsailKlipper(models.Model):
     _name = "mainsail.klipper"
-    _description = "Model containing the HOST and PORT for the Mainsail instance"
+    _description = (
+        "Model containing the HOST and PORT for the Mainsail instance"
+    )
 
     name = fields.Char(
         string="Name",

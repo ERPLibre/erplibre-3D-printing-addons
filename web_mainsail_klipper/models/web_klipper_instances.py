@@ -1,9 +1,12 @@
-from odoo import _, api, models, fields
+from odoo import _, api, fields, models
 
 
 class KlipperInstance(models.Model):
     _name = "klipper.klipper"
-    _description = "Model containing the HOST and PORT for the Klipper instance (Moonraker)"
+    _description = (
+        "Model containing the HOST and PORT for the Klipper instance"
+        " (Moonraker)"
+    )
 
     name = fields.Char(
         string="Name",
@@ -41,5 +44,5 @@ class KlipperInstance(models.Model):
     printer_state = fields.Char(
         string="Printer State",
         help="The state of the Klipper instance",
-        default=""
+        default="",
     )

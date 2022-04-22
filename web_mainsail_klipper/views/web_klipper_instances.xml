@@ -29,7 +29,6 @@
         </field>
     </record>
 
-
     <record model="ir.actions.act_window" id="klipper_klipper_view_action_window">
         <field name="name">Klipper - Moonraker</field>
         <field name="res_model">klipper.klipper</field>

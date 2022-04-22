@@ -1,4 +1,4 @@
-from odoo import _, api, models, fields
+from odoo import _, api, fields, models
 
 
 class Extruder(models.Model):
@@ -7,9 +7,11 @@ class Extruder(models.Model):
 
     @api.model
     def _get_lift_top_selection(self):
-        return [("All surfaces", "All surfaces"),
-                ("Not on top", "Not on top"),
-                ("Only on top", "Only on top")]
+        return [
+            ("All surfaces", "All surfaces"),
+            ("Not on top", "Not on top"),
+            ("Only on top", "Only on top"),
+        ]
 
     nozzle_diameter = fields.Float(
         string="Nozzle diameter",
@@ -87,7 +89,7 @@ class Extruder(models.Model):
     )
 
     retract_lift_top = fields.Selection(
-        selection='_get_lift_top_selection',
+        selection="_get_lift_top_selection",
         string="Retract lift top",
         help="",
         default="All surfaces",
@@ -107,8 +109,11 @@ class Extruder(models.Model):
 
     retract_restart_extra = fields.Integer(
         string="Retract restart extra",
-        help="When the retraction is compensated after the travel move, the extruder will push "
-             "this additional amount of filament. This setting is rarely needed. (mm, default: 0)",
+        help=(
+            "When the retraction is compensated after the travel move, the"
+            " extruder will push this additional amount of filament. This"
+            " setting is rarely needed. (mm, default: 0)"
+        ),
         default=0,
     )
 
@@ -144,16 +149,22 @@ class Extruder(models.Model):
 
     retract_length_toolchange = fields.Integer(
         string="Retract length toolchange",
-        help="When retraction is triggered before changing tool, filament is pulled back by "
-             "the specified amount (the length is measured on raw filament, before it enters "
-             "the extruder). (mm (zero to disable), default: 10)",
+        help=(
+            "When retraction is triggered before changing tool, filament is"
+            " pulled back by the specified amount (the length is measured on"
+            " raw filament, before it enters the extruder). (mm (zero to"
+            " disable), default: 10)"
+        ),
         default=10,
     )
 
     retract_restart_extra_toolchange = fields.Integer(
         string="Retract restart extra toolchange",
-        help="When the retraction is compensated after changing tool, the extruder will push "
-             "this additional amount of filament. (mm, default: 0)",
+        help=(
+            "When the retraction is compensated after changing tool, the"
+            " extruder will push this additional amount of filament. (mm,"
+            " default: 0)"
+        ),
         default=0,
     )
 

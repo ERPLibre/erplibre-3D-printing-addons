@@ -1,5 +1,5 @@
-import math
 import datetime
+import math
 import re
 
 
@@ -10,7 +10,9 @@ class GCode(object):
         self.__process()
 
     def __process(self):
-        for parameter in re.sub('\(.+?\)', '', self.__line).split(";")[0].split():
+        for parameter in (
+            re.sub("\(.+?\)", "", self.__line).split(";")[0].split()
+        ):
             try:
                 self.__params[parameter[0]] = parameter[1:]
             except IndexError:
@@ -30,8 +32,9 @@ class GCode(object):
 
 
 class Analyzer(object):
-
-    def __init__(self, file_path, extruder_acceleration=None, z_acceleration=None):
+    def __init__(
+        self, file_path, extruder_acceleration=None, z_acceleration=None
+    ):
         super(Analyzer, self).__init__()
         self.__file_path = file_path
         self.__pos = {"X": 0, "Y": 0, "Z": 0, "E": 0}
@@ -78,7 +81,9 @@ class Analyzer(object):
             self.__velocity = f / float(60.0)
 
     def __is_move(self):
-        return self.__gcode.get("G", int) == 1 or self.__gcode.get("G", int) == 0
+        return (
+            self.__gcode.get("G", int) == 1 or self.__gcode.get("G", int) == 0
+        )
 
     def __update_move_type(self):
         if self.__gcode.get("G", int) == 91:
@@ -95,7 +100,9 @@ class Analyzer(object):
     def __update_acceleration(self):
         s = self.__gcode.get("S", float, None)
         p = self.__gcode.get("P", float, None)
-        if self.__gcode.get("M", int) == 204 and (s is not None or p is not None):
+        if self.__gcode.get("M", int) == 204 and (
+            s is not None or p is not None
+        ):
             self.__acceleration = s or p
 
     def __get_dist_xy(self):
@@ -140,10 +147,16 @@ class Analyzer(object):
         if not self.__is_move():
             return
         if self.__get_dist_xy() != 0.0:
-            self.__time += self.__accelerated_move(self.__get_dist_xy(), self.__acceleration)
+            self.__time += self.__accelerated_move(
+                self.__get_dist_xy(), self.__acceleration
+            )
         else:
-            self.__time += self.__accelerated_move(self.__get_dist_e(), self.__extruder_acceleration)
-        self.__time += self.__accelerated_move(self.__get_dist_z(), self.__z_acceleration)
+            self.__time += self.__accelerated_move(
+                self.__get_dist_e(), self.__extruder_acceleration
+            )
+        self.__time += self.__accelerated_move(
+            self.__get_dist_z(), self.__z_acceleration
+        )
 
     def __accelerated_move(self, length, acceleration):
         # for half of the move, there are 2 zones, where the speed is increasing/decreasing and
@@ -156,12 +169,16 @@ class Analyzer(object):
         # d_x = v_avg*t => t = d_x / v_avg
         half_length = length / float(2)
         t_init = self.__velocity / acceleration  # time to final velocity
-        dx_init = 0.5 * acceleration * (t_init ** 2)  # initial displacement for the time to get to final velocity
+        dx_init = (
+            0.5 * acceleration * (t_init**2)
+        )  # initial displacement for the time to get to final velocity
         t = 0.0
         if half_length >= dx_init:
             half_length -= dx_init
             t += t_init
-        t += half_length / self.__velocity  # rest of the time is constant speed
+        t += (
+            half_length / self.__velocity
+        )  # rest of the time is constant speed
         return t * 2.0  # cut in half before, so double to get full time spent.
 
     def __update_pos(self):

@@ -70,7 +70,7 @@
                         <h3 class="text-center">Upload your model</h3>
                         <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                         <input type="hidden" name="website_sale_order_id"
-                                   t-att-value="website_sale_order.id"/>
+                               t-att-value="website_sale_order.id"/>
                         <t t-foreach="website_sale_order.website_order_line" t-as="order_line">
                             <input type="hidden" name="p3d_profile_id"
                                    t-att-value="order_line.product_id.profile.id"/>
@@ -109,7 +109,9 @@
         <xpath expr="//div[@id='product_full_description']" position="before">
             <section class="container s_tabs oe_custom_bg" id="p3d_product_full_spec">
                 <h3 class="text-center mb32">Specifications for
-                    <b><t t-esc="product.name"/></b>
+                    <b>
+                        <t t-esc="product.name"/>
+                    </b>
                 </h3>
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2" id="p3d_product_specifications">
@@ -180,7 +182,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th>Minimum shell thickness  Bottom</th>
+                                            <th>Minimum shell thickness Bottom</th>
                                             <td>
                                                 <t t-esc="product.profile.bottom_solid_min_thickness"/>
                                             </td>
@@ -283,13 +285,13 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th>Combine infill every : </th>
+                                            <th>Combine infill every :</th>
                                             <td>
                                                 <t t-esc="product.profile.infill_every_layers"/>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th>Only infill where needed : </th>
+                                            <th>Only infill where needed :</th>
                                             <td>
                                                 <t t-esc="product.profile.infill_only_where_needed"/>
                                             </td>
@@ -363,7 +365,8 @@
                                         <tr>
                                             <th>Color</th>
                                             <td>
-                                                <t t-esc="product.profile.filament_colour" t-options="{'widget': 'color'}"/>
+                                                <t t-esc="product.profile.filament_colour"
+                                                   t-options="{'widget': 'color'}"/>
                                             </td>
                                         </tr>
                                         <tr>
