@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_website_print_3d_write,Write slicing.profile,model_slicing_profile,base.group_user,1,1,1,1

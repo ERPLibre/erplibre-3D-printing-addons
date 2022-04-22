@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="slicing_profile_view_form" model="ir.ui.view">
+        <field name="name">slicing.profile_form</field>
+        <field name="model">slicing.profile</field>
+        <field name="arch" type="xml">
+            <form string="Profile Form">
+                <sheet string="Profile Form">
+                    <group col="4">
+                        <field name="image" widget="image" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="name" string="Profile Name"/>
+                            </div>
+                            <h1>
+                                <field name="name" default_focus="1" placeholder="Name"/>
+                            </h1>
+                        </div>
+                    </group>
+
+                    <notebook>
+                        <page string="Print Settings">
+                            <notebook>
+                                <page string="Perimeters And Shell">
+                                    <separator string="Vertical Shells"/>
+                                    <group>
+                                        <field name="perimeters"/>
+                                        <field name="spiral_vase"/>
+                                    </group>
+                                    <separator string="Horizontal Shells"/>
+                                    <group>
+                                        <group>
+                                            <field name="top_solid_layers"/>
+                                            <field name="top_solid_min_thickness"/>
+                                            <field name="enforce_full_fill_volume"/>
+                                        </group>
+                                        <group>
+                                            <field name="bottom_solid_layers"/>
+                                            <field name="bottom_solid_min_thickness"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Quality"/>
+                                    <group>
+                                        <group>
+                                            <field name="only_one_perimeter_top"/>
+                                            <field name="extra_perimeters_overhangs"/>
+                                            <field name="ensure_vertical_shell_thickness"/>
+                                            <field name="avoid_crossing_perimeters"/>
+                                            <field name="thin_perimeters"/>
+                                            <field name="thin_walls"/>
+                                            <field name="min_width_top_surface"/>
+                                        </group>
+                                        <group>
+                                            <field name="extra_perimeters_odd_layers"/>
+                                            <field name="avoid_crossing_not_first_layer"/>
+                                            <field name="avoid_crossing_perimeters_max_detour"/>
+                                            <field name="thin_perimeters_all"/>
+                                            <field name="thin_walls_min_width"/>
+                                            <field name="thin_walls_overlap"/>
+                                            <field name="thin_walls_merge"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Overhangs"/>
+                                    <group>
+                                        <group>
+                                            <field name="overhangs_width_speed"/>
+                                            <field name="overhangs_reverse"/>
+                                        </group>
+                                        <group>
+                                            <field name="overhangs_width_speed"/>
+                                            <field name="overhangs_reverse_threshold"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Advanced"/>
+                                    <group>
+                                        <group>
+                                            <field name="no_perimeter_unsupported_algo"/>
+                                            <field name="gap_fill"/>
+                                            <field name="seam_position"/>
+                                            <field name="perimeter_loop"/>
+                                            <field name="thin_perimeters"/>
+                                        </group>
+                                        <group>
+                                            <field name="perimeter_round_corners"/>
+                                            <field name="gap_fill_min_area"/>
+                                            <field name="seam_angle_cost"/>
+                                            <field name="seam_travel_cost"/>
+                                            <field name="perimeter_loop_seam"/>
+                                        </group>
+                                    </group>
+                                    <separator string="External Perimeter First"/>
+                                    <group>
+                                        <group>
+                                            <field name="external_perimeters_first"/>
+                                            <field name="external_perimeters_hole"/>
+                                            <field name="external_perimeters_vase"/>
+                                        </group>
+                                        <group>
+                                            <field name="perimeter_bonding"/>
+                                            <field name="external_perimeters_nothole"/>
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Slicing">
+                                    <group>
+                                        <group>
+                                            <separator string="Layer Height"/>
+                                            <field name="layer_height"/>
+                                            <field name="first_layer_height"/>
+                                        </group>
+                                        <group>
+                                            <separator string="Filtering"/>
+                                            <field name="resolution"/>
+                                            <field name="model_precision"/>
+                                            <field name="slice_closing_radius"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Modifying Slices"/>
+                                    <group>
+                                        <group>
+                                            <field name="curve_smoothing_precision"/>
+                                            <field name="xy_size_compensation"/>
+                                            <field name="hole_size_compensation"/>
+                                            <field name="hole_to_polyhole"/>
+                                            <field name="curve_smoothing_angle_convex"/>
+                                            <field name="xy_inner_size_compensation"/>
+                                        </group>
+                                        <group>
+                                            <field name="hole_size_threshold"/>
+                                            <field name="hole_to_polyhole_threshold"/>
+                                            <field name="curve_smoothing_angle_concave"/>
+                                            <field name="first_layer_size_compensation"/>
+                                            <field name="curve_smoothing_cutoff_dist"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Other"/>
+                                    <group>
+                                        <field name="clip_multipart_objects"/>
+                                        <field name="allow_empty_layers"/>
+                                    </group>
+                                </page>
+                                <page string="Infill">
+                                    <separator string="Infill"/>
+                                    <group>
+                                        <group>
+                                            <field name="fill_density"/>
+                                            <field name="infill_anchor_max"/>
+                                            <field name="solid_fill_pattern"/>
+                                            <field name="top_fill_pattern"/>
+                                            <field name="bottom_fill_pattern"/>
+                                            <field name="fill_pattern"/>
+                                        </group>
+                                        <group>
+                                            <field name="infill_connection"/>
+                                            <field name="infill_anchor"/>
+                                            <field name="infill_connection_solid"/>
+                                            <field name="infill_connection_top"/>
+                                            <field name="infill_connection_bottom"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Reducing Printing Time"/>
+                                    <group>
+                                        <group>
+                                            <field name="infill_every_layers"/>
+                                            <field name="infill_only_where_needed"/>
+                                        </group>
+                                        <group>
+                                            <field name="infill_dense"/>
+                                            <field name="infill_dense_algo"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Advanced"/>
+                                    <group>
+                                        <group>
+                                            <field name="solid_infill_every_layers"/>
+                                            <field name="solid_infill_below_area"/>
+                                            <field name="fill_angle"/>
+                                            <field name="bridge_angle"/>
+                                            <field name="fill_angle_increment"/>
+                                        </group>
+                                        <group>
+                                            <field name="external_infill_margin"/>
+                                            <field name="bridged_infill_margin"/>
+                                            <field name="only_retract_when_crossing_perimeters"/>
+                                            <field name="infill_first"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Advanced Infill Options"/>
+                                    <group>
+                                        <group>
+                                            <field name="fill_smooth_distribution"/>
+                                        </group>
+                                        <group>
+                                            <field name="fill_smooth_width"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Ironing Post-Process"/>
+                                    <group>
+                                        <group>
+                                            <field name="ironing"/>
+                                            <field name="ironing_flowrate"/>
+                                            <field name="ironing_spacing"/>
+                                        </group>
+                                        <group>
+                                            <field name="ironing_type"/>
+                                            <field name="ironing_spacing"/>
+                                            <field name="ironing_angle"/>
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Skirt And Brim">
+                                    <separator string="Skirt"/>
+                                    <group>
+                                        <group>
+                                            <field name="skirts"/>
+                                            <field name="skirt_distance"/>
+                                            <field name="skirt_height"/>
+                                        </group>
+                                        <group>
+                                            <field name="draft_shield"/>
+                                            <field name="min_skirt_length"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Brim"/>
+                                    <group>
+                                        <group>
+                                            <field name="brim_width"/>
+                                            <field name="brim_inside_holes"/>
+                                            <field name="brim_width_interior"/>
+                                            <field name="brim_offset"/>
+                                        </group>
+                                        <group>
+                                            <field name="brim_ears"/>
+                                            <field name="brim_ears_max_angle"/>
+                                            <field name="brim_ears_detection_length"/>
+                                            <field name="brim_ears_pattern"/>
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Support Material">
+                                    <separator string="Support Material"/>
+                                    <group>
+                                        <group>
+                                            <field name="support_material"/>
+                                            <field name="support_material_auto"/>
+                                        </group>
+                                        <group>
+                                            <field name="support_material_threshold"/>
+                                            <field name="support_material_enforce_layers"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Raft"/>
+                                    <group>
+                                        <group>
+                                            <field name="support_material_solid_first_layer"/>
+                                        </group>
+                                        <group>
+                                            <field name="raft_layers"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Options for support material and raft"/>
+                                    <group>
+                                        <group>
+                                            <field name="support_material_contact_distance_type"/>
+                                            <field name="support_material_contact_distance_top"/>
+                                            <field name="support_material_contact_distance_bottom"/>
+                                            <field name="support_material_pattern"/>
+                                            <field name="support_material_with_sheath"/>
+                                            <field name="support_material_spacing"/>
+                                        </group>
+                                        <group>
+                                            <field name="support_material_angle"/>
+                                            <field name="support_material_buildplate_only"/>
+                                            <field name="support_material_xy_spacing"/>
+                                            <field name="dont_support_bridges"/>
+                                            <field name="support_material_synchronize_layers"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Options for support material interface"/>
+                                    <group>
+                                        <group>
+                                            <field name="support_material_interface_pattern"/>
+                                            <field name="support_material_interface_layers"/>
+                                        </group>
+                                        <group>
+                                            <field name="support_material_interface_spacing"/>
+                                            <field name="support_material_interface_contact_loops"/>
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Speed">
+                                    <separator string="Speed for print moves"/>
+                                    <group>
+                                        <group>
+                                            <field name="perimeter_speed"/>
+                                            <field name="external_perimeter_speed"/>
+                                            <field name="infill_speed"/>
+                                            <field name="solid_infill_speed"/>
+                                            <field name="top_solid_infill_speed"/>
+                                            <field name="support_material_speed"/>
+                                            <field name="support_material_interface_speed"/>
+                                        </group>
+                                        <group>
+                                            <field name="bridge_speed"/>
+                                            <field name="bridge_speed_internal"/>
+                                            <field name="overhangs_speed"/>
+                                            <field name="gap_fill_speed"/>
+                                            <field name="thin_walls_speed"/>
+                                            <field name="ironing_speed"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Speed for non-print moves"/>
+                                    <group>
+                                        <group>
+                                            <field name="travel_speed"/>
+                                        </group>
+                                        <group>
+                                            <field name="travel_speed_z"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Modifiers"/>
+                                    <group>
+                                        <group>
+                                            <field name="small_perimeter_min_length"/>
+                                            <field name="small_perimeter_max_length"/>
+                                            <field name="small_perimeter_speed"/>
+                                        </group>
+                                        <group>
+                                            <field name="first_layer_speed"/>
+                                            <field name="first_layer_infill_speed"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Acceleration control (advanced)"/>
+                                    <group>
+                                        <group>
+                                            <field name="perimeter_acceleration"/>
+                                            <field name="infill_acceleration"/>
+                                            <field name="bridge_acceleration"/>
+                                        </group>
+                                        <group>
+                                            <field name="first_layer_acceleration"/>
+                                            <field name="default_acceleration"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Auto speed (advanced)"/>
+                                    <group>
+                                        <group>
+                                            <field name="max_volumetric_speed"/>
+                                        </group>
+                                        <group>
+                                            <field name="max_print_speed"/>
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Width And Flow">
+                                    <separator string="Extrusion Width"/>
+                                    <group>
+                                        <group>
+                                            <field name="extrusion_width"/>
+                                            <field name="extrusion_spacing"/>
+                                            <field name="first_layer_extrusion_width"/>
+                                            <field name="first_layer_extrusion_spacing"/>
+                                            <field name="perimeter_extrusion_width"/>
+                                            <field name="perimeter_extrusion_spacing"/>
+                                            <field name="external_perimeter_extrusion_width"/>
+                                            <field name="external_perimeter_extrusion_spacing"/>
+                                        </group>
+                                        <group>
+                                            <field name="infill_extrusion_width"/>
+                                            <field name="infill_extrusion_spacing"/>
+                                            <field name="solid_infill_extrusion_width"/>
+                                            <field name="solid_infill_extrusion_spacing"/>
+                                            <field name="top_infill_extrusion_width"/>
+                                            <field name="top_infill_extrusion_spacing"/>
+                                            <field name="support_material_extrusion_width"/>
+                                            <field name="skirt_extrusion_width"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Overlap"/>
+                                    <group>
+                                        <group>
+                                            <field name="perimeter_overlap"/>
+                                            <field name="external_perimeter_overlap"/>
+                                            <field name="gap_fill_overlap"/>
+                                        </group>
+                                        <group>
+                                            <field name="infill_overlap"/>
+                                            <field name="bridge_overlap"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Flow"/>
+                                    <group>
+                                        <group>
+                                            <field name="bridge_flow_ratio"/>
+                                            <field name="over_bridge_flow_ratio"/>
+                                            <field name="fill_top_flow_ratio"/>
+                                        </group>
+                                        <group>
+                                            <field name="first_layer_flow_ratio"/>
+                                            <field name="external_perimeter_cut_corners"/>
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Multiple Extruders">
+                                    <separator string="Extruders"/>
+                                    <group>
+                                        <group>
+                                            <field name="perimeter_extruder"/>
+                                            <field name="infill_extruder"/>
+                                            <field name="solid_infill_extruder"/>
+                                        </group>
+                                        <group>
+                                            <field name="support_material_extruder"/>
+                                            <field name="support_material_interface_extruder"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Ooze prevention"/>
+                                    <group>
+                                        <group>
+                                            <field name="ooze_prevention"/>
+                                        </group>
+                                        <group>
+                                            <field name="standby_temperature_delta"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Wipe tower"/>
+                                    <group>
+                                        <group>
+                                            <field name="wipe_tower"/>
+                                            <field name="wipe_tower_x"/>
+                                            <field name="wipe_tower_y"/>
+                                            <field name="wipe_tower_brim"/>
+                                            <field name="wipe_tower_width"/>
+                                        </group>
+                                        <group>
+                                            <field name="wipe_tower_rotation_angle"/>
+                                            <field name="wipe_tower_bridging"/>
+                                            <field name="wipe_tower_no_sparse_layers"/>
+                                            <field name="single_extruder_multi_material_priming"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Advanced"/>
+                                    <group>
+                                        <group>
+                                            <field name="interface_shells"/>
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Output Options">
+                                    <separator string="Platter"/>
+                                    <group>
+                                        <group>
+                                            <field name="duplicate_distance"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Sequential printing"/>
+                                    <group>
+                                        <group>
+                                            <field name="complete_objects"/>
+                                            <field name="complete_objects_one_skirt"/>
+                                            <field name="complete_objects_sort"/>
+                                        </group>
+                                        <group>
+                                            <field name="extruder_clearance_radius"/>
+                                            <field name="extruder_clearance_height"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Output file"/>
+                                    <group>
+                                        <group>
+                                            <field name="gcode_comments"/>
+                                            <field name="gcode_label_objects"/>
+                                            <field name="output_filename_format"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Post-Processing milling"/>
+                                    <group>
+                                        <group>
+                                            <field name="milling_post_process"/>
+                                            <field name="milling_extra_size"/>
+                                        </group>
+                                        <group>
+                                            <field name="milling_after_z"/>
+                                            <field name="milling_speed"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Post-Process script"/>
+                                    <group>
+                                        <field name="post_process"/>
+                                    </group>
+                                </page>
+                                <page string="Notes">
+                                    <separator string="Notes"/>
+                                    <group>
+                                        <field name="notes"/>
+                                    </group>
+                                </page>
+                            </notebook>
+                        </page>
+                        <page string="Filament Settings">
+                            <notebook>
+                                <page string="Filament">
+                                    <separator string="Filament"/>
+                                    <group>
+                                        <group>
+                                            <field name="filament_colour" widget="color"/>
+                                            <field name="filament_diameter"/>
+                                            <field name="extrusion_multiplier"/>
+                                        </group>
+                                        <group>
+                                            <group>
+                                                <field name="filament_density"/>
+                                                <field name="filament_cost"/>
+                                                <field name="filament_spool_weight"/>
+                                            </group>
+                                            <group>
+                                                <p>
+                                                    <span>g/cm&#179;</span>
+                                                </p>
+                                                <br/>
+                                                <p>
+                                                    <span>$/kg</span>
+                                                </p>
+                                                <br/>
+                                                <p>
+                                                    <span>g</span>
+                                                </p>
+                                            </group>
+                                        </group>
+                                    </group>
+                                    <separator string="Temperature &#x2103;"/>
+                                    <group>
+                                        <group>
+                                            <field name="first_layer_temperature"/>
+                                            <field name="temperature"/>
+                                            <field name="first_layer_bed_temperature"/>
+                                        </group>
+                                        <group>
+                                            <field name="bed_temperature"/>
+                                            <field name="chamber_temperature"/>
+                                        </group>
+                                    </group>
+                                    <group>
+                                        <group>
+                                            <separator string="Filament properties"/>
+                                            <field name="filament_type"/>
+                                            <field name="filament_soluble"/>
+                                            <field name="filament_shrink"/>
+                                        </group>
+                                        <group>
+                                            <separator string="Print speed override"/>
+                                            <field name="filament_max_speed"/>
+                                            <field name="filament_max_volumetric_speed"/>
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Cooling">
+                                    <separator string="Fan speed - default"/>
+                                    <group>
+                                        <group>
+                                            <field name="fan_always_on"/>
+                                            <field name="min_fan_speed"/>
+                                            <field name="bridge_fan_speed"/>
+                                            <field name="top_fan_speed"/>
+                                        </group>
+                                        <group>
+                                            <field name="external_perimeter_fan_speed"/>
+                                            <field name="disable_fan_first_layers"/>
+                                            <field name="full_fan_speed_layer"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Short layer time - began to increase base fan speed"/>
+                                    <group>
+                                        <group>
+                                            <field name="fan_below_layer_time"/>
+                                        </group>
+                                        <group>
+                                            <field name="max_fan_speed"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Very short layer time - began to decrease extrusion rate"/>
+                                    <group>
+                                        <group>
+                                            <field name="slowdown_below_layer_time"/>
+                                            <field name="max_speed_reduction"/>
+                                            <field name="min_print_speed"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Behaviour"/>
+                                    <group>
+                                        <p>
+                                            Fan will be turned off by default.
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            If estimated layer time is below ~60s, but still greater than ~5s, fan will
+                                            run at a proportionally increasing speed between 35% and 100%, at 100% over
+                                            bridges if it's above the current computed fan speed ; except for the first
+                                            3 layers where the fan is disabled.
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            If estimated layer time is below ~5s fan will run by default to100% (except
+                                            for the first 3 layers where the fan is disabled) and print speed will be
+                                            reduced so that no less than 5s are spent on that layer (however, speed will
+                                            never be reduced below 10mm/s or up to 90% reduction).
+                                        </p>
+                                    </group>
+                                </page>
+                                <page string="Multimaterial">
+                                    <separator string="Multimaterial toolchange temperature"/>
+                                    <group>
+                                        <group>
+                                            <field name="filament_enable_toolchange_temp"/>
+                                            <field name="filament_toolchange_temp"/>
+                                            <field name="filament_use_fast_skinnydip"/>
+                                        </group>
+                                        <group>
+                                            <field name="filament_enable_toolchange_part_fan"/>
+                                            <field name="filament_toolchange_part_fan_speed"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Multimaterial toolchange string reduction"/>
+                                    <group>
+                                        <group>
+                                            <field name="filament_use_skinnydip"/>
+                                            <field name="filament_skinnydip_distance"/>
+                                            <field name="filament_melt_zone_pause"/>
+                                        </group>
+                                        <group>
+                                            <field name="filament_cooling_zone_pause"/>
+                                            <field name="filament_dip_insertion_speed"/>
+                                            <field name="filament_dip_extraction_speed"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Wipe tower parameters"/>
+                                    <group>
+                                        <group>
+                                            <field name="filament_minimal_purge_on_wipe_tower"/>
+                                        </group>
+                                        <group>
+                                            <field name="filament_max_wipe_tower_speed"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Toolchange parameters with single extruder MM printers"/>
+                                    <group>
+                                        <group>
+                                            <field name="filament_loading_speed_start"/>
+                                            <field name="filament_loading_speed"/>
+                                            <field name="filament_unloading_speed_start"/>
+                                            <field name="filament_unloading_speed"/>
+                                            <field name="filament_load_time"/>
+                                            <field name="filament_unload_time"/>
+                                        </group>
+                                        <group>
+                                            <field name="filament_toolchange_delay"/>
+                                            <field name="filament_cooling_moves"/>
+                                            <field name="filament_cooling_initial_speed"/>
+                                            <field name="filament_cooling_final_speed"/>
+                                            <field name="filament_wipe_advanced_pigment"/>
+                                            <field name="filament_ramming_parameters"/>
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Filament Overrides">
+                                    <separator string="Retraction"/>
+                                    <group>
+                                        <group>
+                                            <field name="filament_retract_length"/>
+                                            <field name="filament_retract_lift"/>
+                                            <field name="filament_retract_lift_above"/>
+                                            <field name="filament_retract_lift_below"/>
+                                            <field name="filament_retract_speed"/>
+                                            <field name="filament_deretract_speed"/>
+                                        </group>
+                                        <group>
+                                            <field name="filament_retract_restart_extra"/>
+                                            <field name="filament_retract_before_travel"/>
+                                            <field name="filament_retract_layer_change"/>
+                                            <field name="filament_wipe"/>
+                                            <field name="filament_wipe_extra_perimeter"/>
+                                            <field name="filament_retract_before_wipe"/>
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Custom G-code">
+                                    <separator string="Start G-code"/>
+                                    <group>
+                                        <field name="start_filament_gcode"/>
+                                    </group>
+                                    <separator string="End G-code"/>
+                                    <group>
+                                        <field name="end_filament_gcode"/>
+                                    </group>
+                                </page>
+                                <page string="Notes">
+                                    <separator string="Notes"/>
+                                    <group>
+                                        <field name="filament_notes"/>
+                                    </group>
+                                </page>
+                            </notebook>
+                        </page>
+                        <page string="Printer Settings">
+                            <notebook>
+                                <page string="General">
+                                    <separator string="Size and coordinates"/>
+                                    <group>
+                                        <group>
+                                            <field name="bed_shape"/>
+                                            <field name="max_print_height"/>
+                                        </group>
+                                        <group>
+                                            <field name="z_offset"/>
+                                            <field name="z_step"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Capabilities"/>
+                                    <group>
+                                        <group>
+                                            <field name="extruders_count"/>
+                                            <field name="single_extruder_multi_material"/>
+                                        </group>
+                                        <group>
+                                            <field name="milling_count"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Firmware"/>
+                                    <group>
+                                        <group>
+                                            <field name="gcode_flavor"/>
+                                            <field name="silent_mode"/>
+                                            <field name="remaining_times"/>
+                                        </group>
+                                        <group>
+                                            <field name="gcode_precision_xyz"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Cooling fan"/>
+                                    <group>
+                                        <group>
+                                            <field name="fan_speedup_time"/>
+                                            <field name="fan_speedup_overhangs"/>
+                                        </group>
+                                        <group>
+                                            <field name="fan_kickstart"/>
+                                            <field name="fan_percentage"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Thumbnails"/>
+                                    <group>
+                                        <group>
+                                            <field name="thumbnails"/>
+                                            <field name="thumbnails_with_bed"/>
+                                        </group>
+                                        <group>
+                                            <field name="thumbnails_custom_color"/>
+                                            <field name="thumbnails_color" widget="color"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Advanced"/>
+                                    <group>
+                                        <group>
+                                            <field name="use_relative_e_distances"/>
+                                            <field name="use_firmware_retraction"/>
+                                            <field name="use_volumetric_e"/>
+                                        </group>
+                                        <group>
+                                            <field name="min_length"/>
+                                            <field name="variable_layer_height"/>
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Custom G-code">
+                                    <group>
+                                        <field name="start_gcode_manual"/>
+                                    </group>
+                                    <separator string="Start G-code"/>
+                                    <group>
+                                        <field name="start_gcode"/>
+                                    </group>
+                                    <separator string="End G-code"/>
+                                    <group>
+                                        <field name="end_gcode"/>
+                                    </group>
+                                    <separator string="Before layer change G-code"/>
+                                    <group>
+                                        <field name="before_layer_gcode"/>
+                                    </group>
+                                    <separator string="After layer change G-code"/>
+                                    <group>
+                                        <field name="layer_gcode"/>
+                                    </group>
+                                    <separator string="Toolchange G-code"/>
+                                    <group>
+                                        <field name="toolchange_gcode"/>
+                                    </group>
+                                    <separator string="Between objects G-code (for sequential printing)"/>
+                                    <group>
+                                        <field name="between_objects_gcode"/>
+                                    </group>
+                                    <separator string="Between extrusion role change G-code"/>
+                                    <group>
+                                        <field name="feature_gcode"/>
+                                    </group>
+                                </page>
+                                <page string="Machine limits">
+                                    <separator string="Machine Limits"/>
+                                    <group>
+                                        <group>
+                                            <field name="bed_shape"/>
+                                            <field name="max_print_height"/>
+                                        </group>
+                                        <group>
+                                            <field name="z_offset"/>
+                                            <field name="z_step"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Important for the next fields"/>
+                                    <group>
+                                        <p colspan="2">All the next fields are in this format : (normal, stealth)</p>
+                                    </group>
+                                    <separator string="Maximum feedrates"/>
+                                    <group>
+                                        <group>
+                                            <field name="machine_max_feedrate_x"/>
+                                            <field name="machine_max_feedrate_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="machine_max_feedrate_z"/>
+                                            <field name="machine_max_feedrate_e"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Maximum accelerations"/>
+                                    <group>
+                                        <group>
+                                            <field name="machine_max_acceleration_x"/>
+                                            <field name="machine_max_acceleration_y"/>
+                                            <field name="machine_max_acceleration_z"/>
+                                            <field name="machine_max_acceleration_e"/>
+                                        </group>
+                                        <group>
+                                            <field name="machine_max_acceleration_extruding"/>
+                                            <field name="machine_max_acceleration_retracting"/>
+                                            <field name="machine_max_acceleration_travel"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Jerk limits"/>
+                                    <group>
+                                        <group>
+                                            <field name="machine_max_jerk_x"/>
+                                            <field name="machine_max_jerk_y"/>
+                                        </group>
+                                        <group>
+                                            <field name="machine_max_jerk_z"/>
+                                            <field name="machine_max_jerk_e"/>
+                                        </group>
+                                    </group>
+                                    <separator string="Minimum feedrates"/>
+                                    <group>
+                                        <group>
+                                            <field name="machine_min_extruding_rate"/>
+                                        </group>
+                                        <group>
+                                            <field name="machine_min_travel_rate"/>
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Extruders">
+                                    <field name="extruders">
+                                        <tree string="Extruders count lines">
+                                            <control>
+                                                <create string="Add an extruder"/>
+                                            </control>
+                                            <field name="id"/>
+                                            <field name="tool_name"/>
+                                            <field name="nozzle_diameter"/>
+                                            <field name="wipe"/>
+                                            <field name="extruder_temperature_offset"/>
+                                            <field name="extruder_fan_offset"/>
+                                            <field name="gcode_precision_e"/>
+                                            <field name="extruder_colour" widget="color"/>
+                                        </tree>
+                                        <form string="Create Extruder">
+                                            <sheet string="Create Extruder">
+                                                <group>
+                                                    <group>
+                                                        <separator string="Name and Size"/>
+                                                        <field name="tool_name"/>
+                                                        <field name="nozzle_diameter"/>
+
+                                                        <separator string="Layer height limits"/>
+                                                        <field name="min_layer_height"/>
+                                                        <field name="max_layer_height"/>
+
+                                                        <separator string="Offsets (for multi-extruder printers)"/>
+                                                        <field name="extruder_offset"/>
+                                                        <field name="extruder_temperature_offset"/>
+                                                        <field name="extruder_fan_offset"/>
+
+                                                        <separator
+                                                                string="Retraction when tool is disabled
+                                                                (advanced settings for multi-extruder setups)"/>
+                                                        <field name="retract_length_toolchange"/>
+                                                        <field name="retract_restart_extra_toolchange"/>
+
+                                                        <separator string="Preview"/>
+                                                        <field name="extruder_colour" widget="color"/>
+
+                                                        <separator string="Gcode"/>
+                                                        <field name="gcode_precision_e"/>
+                                                    </group>
+                                                    <group>
+                                                        <separator string="Retraction"/>
+                                                        <field name="retract_length"/>
+                                                        <field name="retract_lift"/>
+                                                        <field name="retract_lift_above"/>
+                                                        <field name="retract_lift_below"/>
+                                                        <field name="retract_lift_first_layer"/>
+                                                        <field name="retract_lift_top"/>
+                                                        <field name="retract_speed"/>
+                                                        <field name="deretract_speed"/>
+                                                        <field name="retract_restart_extra"/>
+                                                        <field name="retract_before_travel"/>
+                                                        <field name="retract_layer_change"/>
+                                                        <field name="wipe"/>
+                                                        <field name="retract_before_wipe"/>
+                                                        <field name="wipe_extra_perimeter"/>
+                                                    </group>
+                                                </group>
+                                            </sheet>
+                                        </form>
+                                    </field>
+                                </page>
+                                <page string="Notes">
+                                    <separator string="Notes"/>
+                                    <group>
+                                        <field name="printer_notes"/>
+                                    </group>
+                                </page>
+                            </notebook>
+                        </page>
+                    </notebook>
+
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="slicing_profile_view_tree" model="ir.ui.view">
+        <field name="name">slicing.profile_tree</field>
+        <field name="model">slicing.profile</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="perimeters"/>
+                <field name="layer_height"/>
+                <field name="resolution"/>
+                <field name="model_precision"/>
+                <field name="create_date"/>
+                <field name="write_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <act_window
+            id="slicing_profile_action_view_action_window"
+            name="Profiles"
+            res_model="slicing.profile"
+            view_mode="tree,form"
+    />
+</odoo>

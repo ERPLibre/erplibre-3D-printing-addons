@@ -1,0 +1,3971 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* web_slicing_profile
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-16 20:30+0000\n"
+"PO-Revision-Date: 2021-08-16 17:33-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__infill_first
+msgid ""
+" This option will switch the print order of perimeters and infill, making "
+"the latter first."
+msgstr ""
+" Cette option changera l’ordre d’impression des périmètres et du "
+"remplissage, ce qui en fera le dernier en premier."
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "<span>$/kg</span>"
+msgstr "<span>$/kg</span>"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "<span>g/cm³</span>"
+msgstr "<span>g/cm³</span>"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Acceleration control (advanced)"
+msgstr "Contrôle d'accélération (option avancée)"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__message_needaction
+msgid "Action Needed"
+msgstr "Intervention nécessaire"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Add an extruder"
+msgstr "Ajouter une extrudeuse"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__extra_perimeters_overhangs
+msgid ""
+"Add more perimeters when needed for avoiding gaps in sloping walls. Slic3r "
+"keeps adding perimeters until all overhangs are filled. !! this is a very "
+"slow algorithm !! If you use this setting, strongly consider also using "
+"overhangs_reverse."
+msgstr ""
+"Ajoutez des périmètres supplémentaires si nécessaire pour éviter les vides "
+"dans les murs en pente. Slic3r continue d'ajouter des périmètres jusqu'à ce "
+"que tous les surplombs soient remplis. !! c'est un algorithme très lent !! "
+"Si vous utilisez ce paramètre, pensez fortement à utiliser aussi "
+"overhangs_reverse."
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__extra_perimeters
+msgid ""
+"Add more perimeters when needed for avoiding gaps in sloping walls. Slic3r "
+"keeps adding perimeters, until more than 70% of the loop immediately above "
+"is supported. If you succeed in triggering the algorithm behind this "
+"setting, please send me a message. Personally, I think it's useless."
+msgstr ""
+"Ajoutez des périmètres supplémentaires si nécessaire pour éviter les vides "
+"dans les murs en pente. Slic3r continue à ajouter des périmètres, jusqu'à ce"
+" que plus de 70 % de la boucle située immédiatement au-dessus soit "
+"supportée. Si vous réussissez à déclencher l'algorithme derrière ce "
+"paramètre, veuillez m'envoyer un message. Personnellement, je pense que "
+"c'est inutile."
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__extra_perimeters_odd_layers
+msgid ""
+"Add one perimeter every odd layer. With this, infill is taken into the "
+"sandwich and you may be able to reduce drastically the infill/perimeter "
+"overlap setting."
+msgstr ""
+"Ajouter un périmètre à chaque couche impaire. Avec cela, le remplissage est "
+"pris en sandwich et vous pourrez peut-être réduire considérablement le "
+"paramètre de chevauchement remplissage/périmètre."
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__ensure_vertical_shell_thickness
+msgid ""
+"Add solid infill near sloping surfaces to guarantee the vertical shell "
+"thickness (top+bottom solid layers)."
+msgstr ""
+"Ajouter un remplissage plein à proximité des surfaces inclinées pour "
+"garantir une épaisseur de coque verticale (couches pleines du dessus + du "
+"dessous)."
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__fill_angle_increment
+msgid ""
+"Add this angle each layer to the base angle for infill. May be useful for "
+"art, or to be sure to hit every object's feature even with very low infill. "
+"Still experimental, tell me what makes it useful, or the problems that arise"
+" using it. (°, default: 0)"
+msgstr ""
+"Ajoutez cet angle à chaque couche à l'angle de base pour le remplissage. "
+"Peut être utile pour art, ou pour être sûr de toucher chaque caractéristique"
+" de l'objet même avec un remplissage très faible. Encore expérimental, "
+"dites-moi ce qui le rend utile, ou les problèmes qui se posent en "
+"l'utilisant."
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Advanced"
+msgstr "Avancé"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Advanced Infill Options"
+msgstr "Options avancées de remplissage"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_minimal_purge_on_wipe_tower
+msgid ""
+"After a tool change, the exact position of the newly loaded filament inside "
+"the nozzle may not be known, and the filament pressure is likely not yet "
+"stable. Before purging the print head into an infill or a sacrificial "
+"object, Slic3r will always prime this amount of material into the wipe tower"
+" to produce successive infill or sacrificial object extrusions reliably. "
+"(mm³, default: 15)"
+msgstr ""
+"Après un changement de filament, la position exacte dans la buse du filament"
+" qui vient d'être chargé peut ne pas être connue et la pression du filament "
+"n'est probablement pas encore stable. Avant de purger la tête d'impression "
+"dans un remplissage ou un objet sacrificiel, Slic3r va toujours utiliser "
+"cette quantité de matériau dans la tour de purge pour produire un "
+"remplissage successif ou des extrusions d'objet sacrificiel de façon fiable."
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "After layer change G-code"
+msgstr "G-Code après changement de couche"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__wipe_advanced_algo
+msgid ""
+"Algorithm for the advanced wipe. Linear : volume = nozzle + volume_mult * "
+"(pigmentBefore_pigmentAfter) Quadratic: volume = nozzle + volume_mult * "
+"(pigmentBefore_pigmentAfter)+ volume_mult * (pigmentBefore_pigmentAfter)^3 "
+"Hyperbola: volume = nozzle + volume_mult * (0.5+pigmentBefore) / "
+"(0.5+pigmentAfter) (linear, quadra, expo; default: linear)"
+msgstr ""
+"Algorithme pour la purge avancé. Linéaire: volume = buse + volume_mult * "
+"(pigmentAvant - pigmentAprès). Quadratique: volume = buse + volume_mult * "
+"(pigmentAvant - pigmentAprès) + volume_mult * (pigmentAvant - "
+"pigmentAprès)^3. Hyperbolique: volume = buse + volume_mult * (0.5 + "
+"pigmentAvant) / (0.5 + pigmentAprès). (linear, quadra, expo; par défaut : "
+"linear)"
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,ironing_type:0
+msgid "All solid surfaces"
+msgstr "Toutes les surfaces pleines"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "All the next fields are in this format : (normal, stealth)"
+msgstr "Tous les champs suivants sont dans ce format (normal , furtif)"
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,ironing_type:0
+msgid "All top surfaces"
+msgstr "Toutes les surfaces du dessus"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__wipe_advanced
+msgid ""
+"Allow Slic3r to compute the purge volume via smart computations. Use the "
+"pigment% of each filament and following parameters"
+msgstr ""
+"Permettre à Slic3r de calculer le volume de purge via des calculs "
+"intelligents. Utilisez le pigment% de chaque filament et les paramètres "
+"suivants"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__thin_perimeters_all
+msgid "Allow all perimeters to overlap, instead of just external ones."
+msgstr ""
+"Permettez à tous les périmètres de se chevaucher, et pas seulement aux "
+"périmètres externes."
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__allow_empty_layers
+msgid "Allow empty layers"
+msgstr "Autoriser les couches vides"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__thin_perimeters
+msgid ""
+"Allow outermost perimeter to overlap itself to avoid the use of thin walls. "
+"Note that flow isn't adjusted and so this will result in over_extruding and "
+"undefined behavior."
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__thin_walls_merge
+msgid ""
+"Allow the external perimeter to merge the thin walls in the path. You can "
+"deactivate this if you are using thin walls as a custom support, to reduce "
+"adhesion a little."
+msgstr ""
+"Permettre au périmètre extérieur de fusionner les murs fins dans le chemin. "
+"Vous pouvez le désactiver si vous utilisez des murs minces comme support "
+"personnalisé, pour réduire l'adhérence un peu."
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,machine_limits_usage:0
+msgid "Also emit limits to G-code"
+msgstr "Émettre également les limites dans le G-Code"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Auto speed (advanced)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__avoid_crossing_not_first_layer
+msgid "Avoid crossing not first layer"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__avoid_crossing_perimeters
+msgid "Avoid crossing perimeters"
+msgstr "Éviter de traverser les périmètres"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__avoid_crossing_perimeters_max_detour
+msgid "Avoid crossing perimeters max detour"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__bed_custom_model
+msgid "Bed custom model"
+msgstr "Modèle personnalisé de plateau"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__bed_custom_texture
+msgid "Bed custom texture"
+msgstr "Texture du plateau personnalisée"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__bed_shape
+msgid "Bed shape"
+msgstr "Forme du plateau"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__bed_temperature
+msgid "Bed temperature"
+msgstr "Température du plateau"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Before layer change G-code"
+msgstr "G-Code avant changement de couche"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__before_layer_gcode
+msgid "Before layer gcode"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Behaviour"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Between extrusion role change G-code"
+msgstr "Entre changement G-Code de type d'extrusion"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Between objects G-code (for sequential printing)"
+msgstr "Entre le G-Code des objets (pour une impression séquentielle)"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__between_objects_gcode
+msgid "Between objects gcode"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__bottom_fill_pattern
+msgid "Bottom fill pattern"
+msgstr "Motif de remplissage du dessous"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__bottom_solid_layers
+msgid "Bottom solid layers"
+msgstr "Couches pleines du dessous"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__bottom_solid_min_thickness
+msgid "Bottom solid min thickness"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__bridge_acceleration
+msgid "Bridge acceleration"
+msgstr "Acceleration pour les ponts"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__bridge_angle
+msgid "Bridge angle"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__bridge_fan_speed
+msgid "Bridge fan speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__bridge_flow_ratio
+msgid "Bridge flow ratio"
+msgstr "Ratio de débit des ponts"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__bridge_overlap
+msgid "Bridge overlap"
+msgstr "Recouvrement des ponts"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__bridge_speed
+msgid "Bridge speed"
+msgstr "Vitesse pour ponts"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__bridge_speed_internal
+msgid "Bridge speed internal"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__bridged_infill_margin
+msgid "Bridged infill margin"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__bridge_angle
+msgid ""
+"Bridging angle override. If left to zero, the bridging angle will be "
+"calculated automatically. Otherwise the provided angle will be used for all "
+"bridges. Use 180° for zero angle. (°, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Brim"
+msgstr "Bordure"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__brim_ears
+msgid "Brim ears"
+msgstr "Bordure sur les coins"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__brim_ears_detection_length
+msgid "Brim ears detection length"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__brim_ears_max_angle
+msgid "Brim ears max angle"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__brim_ears_pattern
+msgid "Brim ears pattern"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__brim_inside_holes
+msgid "Brim inside holes"
+msgstr "Bordure à l'intérieurs des trous"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__brim_offset
+msgid "Brim offset"
+msgstr "Décalage de la bordure"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__brim_width
+msgid "Brim width"
+msgstr "Largeur de la bordure"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__brim_width_interior
+msgid "Brim width interior"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_cooling_zone_pause
+msgid ""
+"Can be useful to avoid bondtech gears deforming hot tips, but not ordinarily"
+" needed (milliseconds, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Capabilities"
+msgstr "Fonctionnalités"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__chamber_temperature
+msgid "Chamber temperature"
+msgstr "Température de chambre"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__infill_dense_algo
+msgid ""
+"Choose the way the dense layer is laid out. The automatic option lets it try"
+" to draw the smallest surface with only strait lines inside the sparse "
+"infill. The Anchored option just slightly enlarges (by 'Default infill "
+"margin') the surfaces that need a better support. (automatic, autosmall, "
+"autoenlarged, enlarged; default: autoenlarged)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__clip_multipart_objects
+msgid "Clip multipart objects"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__color_change_gcode
+msgid "Color change gcode"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__complete_objects
+msgid "Complete objects"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__complete_objects_one_skirt
+msgid "Complete objects one skirt"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__complete_objects_sort
+msgid "Complete objects sort"
+msgstr ""
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,brim_ears_pattern:0
+msgid "Concentric"
+msgstr "Concentrique"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__infill_anchor
+msgid ""
+"Connect an infill line to an internal perimeter with a short segment of an "
+"additional perimeter. If expressed as percentage (example: 15%) it is "
+"calculated over infill extrusion width. Slic3r tries to connect two close "
+"infill lines to a short perimeter segment. If no such perimeter segment "
+"shorter than infill_anchor_max is found, the infill line is connected to a "
+"perimeter segment at just one side and the length of the perimeter segment "
+"taken is limited to this parameter, but no longer than anchor_length_max. "
+"Set this parameter to zero to disable anchoring perimeters connected to a "
+"single infill line. (mm or %, default: 600%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__infill_anchor_max
+msgid ""
+"Connect an infill line to an internal perimeter with a short segment of an "
+"additional perimeter. If expressed as percentage (example: 15%) it is "
+"calculated over infill extrusion width. Slic3r tries to connect two close "
+"infill lines to a short perimeter segment. If no such perimeter segment "
+"shorter than this parameter is found, the infill line is connected to a "
+"perimeter segment at just one side and the length of the perimeter segment "
+"taken is limited to infill_anchor, but no longer than this parameter. If set"
+" to 0, the old algorithm for infill connection will be used, it should "
+"create the same result as with 1000 & 0. (mm or %, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__cooling
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Cooling"
+msgstr "Refroidissement"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Cooling fan"
+msgstr "Ventilateur de refroidissement"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_cooling_final_speed
+msgid ""
+"Cooling moves are gradually accelerated towards this speed. (mm/s, default: "
+"3.4)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_cooling_initial_speed
+msgid ""
+"Cooling moves are gradually accelerated, starting at this speed. (mm/s, "
+"default: 2.2)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__cooling_tube_length
+msgid "Cooling tube length"
+msgstr "Longueur du tube de refroidissement"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__cooling_tube_retraction
+msgid "Cooling tube retraction"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__seam_travel_cost
+msgid ""
+"Cost of moving the extruder. The highest penalty is when the point is the "
+"furthest from the position of the extruder before extruding the external "
+"perimeter (%, default: 100%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__seam_angle_cost
+msgid ""
+"Cost of placing the seam at a bad angle. The worst angle (max penalty) is "
+"when it's flat. (%, default: 100%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__create_uid
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__create_date
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__curve_smoothing_angle_concave
+msgid "Curve smoothing angle concave"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__curve_smoothing_angle_convex
+msgid "Curve smoothing angle convex"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__curve_smoothing_cutoff_dist
+msgid "Curve smoothing cutoff dist"
+msgstr "Distance max pour le lissage de courbe"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__curve_smoothing_precision
+msgid "Curve smoothing precision"
+msgstr "Précision du lissage de courbe"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Custom G-code"
+msgstr "G-Code personnalisé"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__default_acceleration
+msgid "Default acceleration"
+msgstr "Accélération par défaut"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__fill_angle
+msgid ""
+"Default base angle for infill orientation. Cross_hatching will be applied to"
+" this. Bridges will be infilled using the best direction Slic3r can detect, "
+"so this setting does not affect them. (°, default: 45)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__fill_density
+msgid ""
+"Density of internal infill, expressed in the range 0% _ 100%. (%, default: "
+"18%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__deretract_speed
+msgid "Deretract speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__thin_walls
+msgid ""
+"Detect single_width walls (parts where two extrusions don't fit and we need "
+"to collapse them into a single trace). If unchecked, Slic3r may try to fit "
+"perimeters where it's not possible, creating some overlap leading to "
+"over_extrusion."
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_enable_toolchange_temp
+msgid ""
+"Determines whether toolchange temperatures will be applied (default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,machine_limits_usage:0
+msgid "Disable"
+msgstr "Désactiver"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__disable_fan_first_layers
+msgid "Disable fan first layers"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__display_name
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__parking_pos_retraction
+msgid ""
+"Distance of the extruder tip from the position where the filament is parked "
+"when unloaded. This should match the value in printer firmware. (mm, "
+"default: 92)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__allow_empty_layers
+msgid ""
+"Do not prevent the gcode builder to trigger an exception if a full layer is "
+"empty and so the print will have to start from thin air afterward."
+msgstr ""
+"N'empêchez pas le constructeur de gcode de déclencher une exception si une "
+"couche pleine est vide et donc l'impression devra repartir de zéro par la "
+"suite."
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__avoid_crossing_not_first_layer
+msgid "Do not use the 'Avoid crossing perimeters' on the first layer."
+msgstr ""
+"N'utilisez pas l'option 'Éviter de traverser les périmètres' sur la première"
+" couche."
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__dont_support_bridges
+msgid "Dont support bridges"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__draft_shield
+msgid "Draft shield"
+msgstr "Bouclier contre les flux d'air"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__duplicate_distance
+msgid "Duplicate distance"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__gap_fill
+msgid ""
+"Enable gap fill algorithm. It will extrude small lines between perimeters "
+"when there is not enough space for another perimeter or an infill."
+msgstr ""
+"Activer l'algorithme de remplissage des trous. Il extrudera de petites "
+"lignes entre les périmètres lorsqu'il n'y a pas assez d'espace pour un autre"
+" périmètre ou un remplissage."
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__infill_dense
+msgid ""
+"Enables the creation of a support layer under the first solid layer. This "
+"allows you to use a lower infill ratio without compromising the top quality."
+" The dense infill is laid out with a 50% infill density."
+msgstr ""
+"Permet la création d'une couche de support sous la première surface pleine "
+"interne. Cela vous permet d'utiliser un taux de remplissage très bas sans "
+"compromettre la qualité du remplissage solide. Le remplissage dense utilise "
+"une densité de remplissage de 50%."
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "End G-code"
+msgstr "G-Code de fin"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__end_filament_gcode
+msgid "End filament gcode"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__end_gcode
+msgid "End gcode"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__enforce_full_fill_volume
+msgid "Enforce full fill volume"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__ensure_vertical_shell_thickness
+msgid "Ensure vertical shell thickness"
+msgstr "S'assurer de l'épaisseur de la coque verticale"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_shrink
+msgid ""
+"Enter the shrinkage percentage that the filament will get after cooling (94%"
+" if you measure 94mm instead of 100mm). The part will be scaled in xy to "
+"compensate.Only the filament used for the perimeter is taken into account. "
+"Be sure to allow enough space between objects, as this compensation is done "
+"after the checks. (%, default: 100%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_diameter
+msgid ""
+"Enter your filament diameter here. Good precision is required, so use a "
+"caliper and do multiple measurements along the filament, then compute the "
+"average. (mm, default: 1.75)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__exact_last_layer_height
+msgid "Exact last layer height"
+msgstr "Mettre la dernière couche à la hauteur exacte"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__no_perimeter_unsupported_algo
+msgid ""
+"Experimental option to remove perimeters where there is nothing under them "
+"and where a bridged infill should be better. * Remove perimeters: remove the"
+" unsupported perimeters, leave the bridge area as_is. * Keep only bridges: "
+"remove the perimeters in the bridge areas, keep only bridges that end in "
+"solid area. * Keep bridges and overhangs: remove the unsupported perimeters,"
+" keep only bridges that end in solid area, fill the rest with overhang "
+"perimeters+bridges. * Fill the voids with bridges: remove the unsupported "
+"perimeters, draw bridges over the whole hole.* !! this one can escalate to "
+"problems with overhangs shaped like /\\, so you should use it only on one "
+"layer at a time via the height_range modifier! !!Computationally "
+"intensive!!. (none, noperi, bridges, bridgesoverhangs, filled; default: "
+"none)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__enforce_full_fill_volume
+msgid ""
+"Experimental option which modifies (in solid infill) fill flow to have the "
+"exact amount of plastic inside the volume to fill (it generally changes the "
+"flow from _7% to +4%, depending on the size of the surface to fill and the "
+"overlap parameters, but it can go as high as +50% for infill in very small "
+"areas where rectilinear doesn't have good coverage). It has the advantage to"
+" remove theover_extrusion seen in thin infill areas, from the overlap ratio"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_toolchange_part_fan_speed
+msgid ""
+"Experimental setting. Fan speeds that are too high can clash with the "
+"hotend's PID routine. (%, default: 50)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_enable_toolchange_part_fan
+msgid ""
+"Experimental setting. May enable the hotend to cool down faster during "
+"toolchanges (default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_use_fast_skinnydip
+msgid ""
+"Experimental: drops nozzle temperature during cooling moves instead of prior"
+" to extraction to reduce wait time. (default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "External Perimeter First"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__external_infill_margin
+msgid "External infill margin"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__external_perimeter_cut_corners
+msgid "External perimeter cut corners"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__external_perimeter_extrusion_spacing
+msgid "External perimeter extrusion spacing"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__external_perimeter_extrusion_width
+msgid "External perimeter extrusion width"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__external_perimeter_fan_speed
+msgid "External perimeter fan speed"
+msgstr "Vitesse du ventilateur du périmètre externe"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__external_perimeter_overlap
+msgid "External perimeter overlap"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__external_perimeter_speed
+msgid "External perimeter speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__external_perimeters_first
+msgid "External perimeters first"
+msgstr "Périmètres externes en premier"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__external_perimeters_hole
+msgid "External perimeters hole"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__external_perimeters_nothole
+msgid "External perimeters nothole"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__external_perimeters_vase
+msgid "External perimeters vase"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__extra_loading_move
+msgid "Extra loading move"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__extra_perimeters
+msgid "Extra perimeters"
+msgstr "Périmètres supplémentaires"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__extra_perimeters_odd_layers
+msgid "Extra perimeters odd layers"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__extra_perimeters_overhangs
+msgid "Extra perimeters overhangs"
+msgstr "Périmètres supplémentaires au-dessus des surplombs"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__overhangs_reverse
+msgid ""
+"Extrude perimeters that have a part over an overhang in the reverse "
+"direction on odd layers. This alternating pattern can drastically improve "
+"steep overhang. !! this is a very slow algorithm (it uses the same results "
+"as extra_perimeters_overhangs) !!"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__extruder_clearance_height
+msgid "Extruder clearance height"
+msgstr "Dégagement vertical de l'extrudeuse"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__extruder_clearance_radius
+msgid "Extruder clearance radius"
+msgstr "Diamètre de dégagement de l'extrudeuse"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__extruder_colour
+msgid "Extruder colour"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__extruder_fan_offset
+msgid "Extruder fan offset"
+msgstr "Décalage du ventilateur de l'extrudeuse"
+
+#. module: web_slicing_profile
+#: model:ir.model,name:web_slicing_profile.model_slicing_extruder
+msgid "Extruder for this Slicing Profile"
+msgstr "Extrudeuse pour ce Profil d'impression"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__extruder_offset
+msgid "Extruder offset (X*Y)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__extruder_temperature_offset
+msgid "Extruder temperature offset"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__extruders
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Extruders"
+msgstr "Extrudeuses"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__extruders_count
+msgid "Extruders count"
+msgstr "Nombre d'extrudeuses"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Extruders count lines"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Extrusion Width"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__extrusion_multiplier
+msgid "Extrusion multiplier"
+msgstr "Multiplicateur d'extrusion"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__extrusion_spacing
+msgid "Extrusion spacing"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__extrusion_width
+msgid "Extrusion width"
+msgstr "Largeur d'extrusion"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__fan_always_on
+msgid "Fan always on"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__fan_below_layer_time
+msgid "Fan below layer time"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__fan_kickstart
+msgid "Fan kickstart"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__fan_percentage
+msgid "Fan percentage"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Fan speed - default"
+msgstr "Vitesse du ventilateur - par défaut"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__full_fan_speed_layer
+msgid ""
+"Fan speed will be ramped up linearly from zero at layer "
+"'disable_fan_first_layers' to maximum at layer 'full_fan_speed_layer'. "
+"'full_fan_speed_layer' will be ignored if lower than "
+"'disable_fan_first_layers', in which case the fan will be running at maximum"
+" allowed speed at layer 'disable_fan_first_layers' + 1. (default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__fan_speedup_overhangs
+msgid "Fan speedup overhangs"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__fan_speedup_time
+msgid "Fan speedup time"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Fan will be turned off by default."
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__feature_gcode
+msgid "Feature gcode"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Filament"
+msgstr "Filament"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Filament Overrides"
+msgstr "Rétractions de Filament"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Filament Settings"
+msgstr "Réglages du filament"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_colour
+msgid "Filament colour"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_cooling_final_speed
+msgid "Filament cooling final speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_cooling_initial_speed
+msgid "Filament cooling initial speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_cooling_moves
+msgid "Filament cooling moves"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_cooling_zone_pause
+msgid "Filament cooling zone pause"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_cost
+msgid "Filament cost"
+msgstr "Coût du filament"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_density
+msgid "Filament density"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_deretract_speed
+msgid "Filament deretract speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_diameter
+msgid "Filament diameter"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_dip_extraction_speed
+msgid "Filament dip extraction speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_dip_insertion_speed
+msgid "Filament dip insertion speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_enable_toolchange_part_fan
+msgid "Filament enable toolchange part fan"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_enable_toolchange_temp
+msgid "Filament enable toolchange temp"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_cooling_moves
+msgid ""
+"Filament is cooled by being moved back and forth in the cooling tubes. "
+"Specify desired number of these moves. (default: 4)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_load_time
+msgid "Filament load time"
+msgstr "Temps de chargement du filament"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_loading_speed
+msgid "Filament loading speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_loading_speed_start
+msgid "Filament loading speed start"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_max_speed
+msgid "Filament max speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_max_volumetric_speed
+msgid "Filament max volumetric speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_max_wipe_tower_speed
+msgid "Filament max wipe tower speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_melt_zone_pause
+msgid "Filament melt zone pause"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_minimal_purge_on_wipe_tower
+msgid "Filament minimal purge on wipe tower"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_notes
+msgid "Filament notes"
+msgstr "Notes du filament"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Filament properties"
+msgstr "Propriétés du filament"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_ramming_parameters
+msgid "Filament ramming parameters"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_retract_before_travel
+msgid "Filament retract before travel"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_retract_before_wipe
+msgid "Filament retract before wipe"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_retract_layer_change
+msgid "Filament retract layer change"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_retract_length
+msgid "Filament retract length"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_retract_lift
+msgid "Filament retract lift"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_retract_lift_above
+msgid "Filament retract lift above"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_retract_lift_below
+msgid "Filament retract lift below"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_retract_restart_extra
+msgid "Filament retract restart extra"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_retract_speed
+msgid "Filament retract speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_settings_id
+msgid "Filament settings id"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_shrink
+msgid "Filament shrink"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_skinnydip_distance
+msgid "Filament skinnydip distance"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_soluble
+msgid "Filament soluble"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_spool_weight
+msgid "Filament spool weight"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_toolchange_delay
+msgid "Filament toolchange delay"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_toolchange_part_fan_speed
+msgid "Filament toolchange part fan speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_toolchange_temp
+msgid "Filament toolchange temp"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_type
+msgid "Filament type"
+msgstr "Type de filament"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_unload_time
+msgid "Filament unload time"
+msgstr "Temps de déchargement du filament"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_unloading_speed
+msgid "Filament unloading speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_unloading_speed_start
+msgid "Filament unloading speed start"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_use_fast_skinnydip
+msgid "Filament use fast skinnydip"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_use_skinnydip
+msgid "Filament use skinnydip"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_vendor
+msgid "Filament vendor"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_wipe
+msgid "Filament wipe"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_wipe_advanced_pigment
+msgid "Filament wipe advanced pigment"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__filament_wipe_extra_perimeter
+msgid "Filament wipe extra perimeter"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__fill_angle
+msgid "Fill angle"
+msgstr "Angle du remplissage"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__fill_angle_increment
+msgid "Fill angle increment"
+msgstr "Incrément de l'angle de remplissage"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__fill_density
+msgid "Fill density"
+msgstr "Densité du remplissage"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__fill_pattern
+msgid "Fill pattern"
+msgstr "Motif de remplissage"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__bottom_fill_pattern
+msgid ""
+"Fill pattern for bottom infill. This only affects the bottom visible layer, "
+"and not its adjacent solid shells. (rectilinear, monotonicgapfill, "
+"monotonic, concentric, concentricgapfill, hilbertcurve, archimedeanchords, "
+"octagramspiral, smooth; default: monotonic)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__fill_pattern
+msgid ""
+"Fill pattern for general low_density infill. (rectilinear, monotonic, grid, "
+"triangles, stars, cubic, line, concentric, honeycomb, 3dhoneycomb, gyroid, "
+"hilbertcurve, archimedeanchords, octagramspiral, scatteredrectilinear, "
+"adaptivecubic, supportcubic; default: stars)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__solid_fill_pattern
+msgid ""
+"Fill pattern for solid (internal) infill. This only affects the solid "
+"not_visible layers. You should use rectilinear in most cases. You can try "
+"ironing for translucent material. Rectilinear (filled) replaces zig_zag "
+"patterns by a single big line & is more efficient for filling little spaces."
+" (smooth, rectilinear, rectilineargapfill, monotonic, concentric, "
+"concentricgapfill, hilbertcurve, archimedeanchords, octagramspiral; default:"
+" rectilineargapfill)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__top_fill_pattern
+msgid ""
+"Fill pattern for top infill. This only affects the top visible layer, and "
+"not its adjacent solid shells. (rectilinear, monotonicgapfill, monotonic, "
+"concentric, concentricgapfill, hilbertcurve, archimedeanchords, "
+"octagramspiral, sawtooth, smooth, smoothtriple, smoothhilbert; default: "
+"monotonic)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__fill_smooth_distribution
+msgid "Fill smooth distribution"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__fill_smooth_width
+msgid "Fill smooth width"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__fill_top_flow_ratio
+msgid "Fill top flow ratio"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Filtering"
+msgstr "Filtration"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Firmware"
+msgstr "Firmware"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__first_layer_acceleration
+msgid "First layer acceleration"
+msgstr "Accélération pour la première couche"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__first_layer_bed_temperature
+msgid "First layer bed temperature"
+msgstr "Température du plateau pour la première couche"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__first_layer_extrusion_spacing
+msgid "First layer extrusion spacing"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__first_layer_extrusion_width
+msgid "First layer extrusion width"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__first_layer_flow_ratio
+msgid "First layer flow ratio"
+msgstr "Ratio du débit de la première couche"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__first_layer_height
+msgid "First layer height"
+msgstr "Hauteur de la première couche"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__first_layer_infill_speed
+msgid "First layer infill speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__first_layer_size_compensation
+msgid "First layer size compensation"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__first_layer_speed
+msgid "First layer speed"
+msgstr "Vitesses pour la première couche"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__first_layer_temperature
+msgid "First layer temperature"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Flow"
+msgstr "Débit"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_skinnydip_distance
+msgid ""
+"For stock extruders, usually 40_42mm. For bondtech extruder upgrade, usually"
+" 30_32mm. Start with a low value and gradually increase it until strings are"
+" gone. If there are blobs on your wipe tower, your value is too high. (mm, "
+"default: 31)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__solid_infill_below_area
+msgid ""
+"Force solid infill for regions having a smaller area than the specified "
+"threshold. (mm², default: 70)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__interface_shells
+msgid ""
+"Force the generation of solid shells between adjacent materials/volumes. "
+"Useful for multi_extruder prints with translucent materials or manual "
+"soluble support material."
+msgstr ""
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,support_material_contact_distance_type:0
+msgid "From filament"
+msgstr "Depuis le filament"
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,support_material_contact_distance_type:0
+msgid "From plane"
+msgstr "Depuis le plan"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__full_fan_speed_layer
+msgid "Full fan speed layer"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__gcode_flavor
+msgid "G-code flavor"
+msgstr "Version du G-Code"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__gap_fill
+msgid "Gap fill"
+msgstr "Bouchage des trous"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__gap_fill_min_area
+msgid "Gap fill min area"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__gap_fill_overlap
+msgid "Gap fill overlap"
+msgstr "Chevauchement de remplissage des lacunes"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__gap_fill_speed
+msgid "Gap fill speed"
+msgstr "Vitesse de remplissage des lacunes"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__gcode_comments
+msgid "Gcode comments"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__gcode_label_objects
+msgid "Gcode label objects"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__gcode_precision_e
+msgid "Gcode precision e"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__gcode_precision_xyz
+msgid "Gcode precision xyz"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "General"
+msgstr "Général"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__infill_connection
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__infill_connection_bottom
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__infill_connection_solid
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__infill_connection_top
+msgid ""
+"Give to the infill algorithm if the infill needs to be connected, and on "
+"which perimeters Can be useful for art or with high infill/perimeter "
+"overlap. The result may vary between infill types. (connected, holes, "
+"outershell, notconnected; default: connected)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__high_current_on_filament_swap
+msgid "High current on filament swap"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__hole_size_compensation
+msgid "Hole size compensation"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__hole_size_threshold
+msgid "Hole size threshold"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__hole_to_polyhole
+msgid "Hole to polyhole"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__hole_to_polyhole_threshold
+msgid "Hole to polyhole threshold"
+msgstr ""
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,support_material_pattern:0
+msgid "Honeycomb"
+msgstr "Nid d'abeille"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Horizontal Shells"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__host_type
+msgid "Host type"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__id
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__id
+msgid "ID"
+msgstr "ID"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__message_unread
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__draft_shield
+msgid ""
+"If enabled, the skirt will be as tall as a highest printed object. This is "
+"useful to protect an ABS or ASA print from warping and detaching from print "
+"bed due to wind draft."
+msgstr ""
+"Si elle est activée, la jupe sera aussi haute que l'objet imprimé le plus "
+"haut. Cela sert à protéger les impressions ABS ou ASA des phénomènes de "
+"déformation ou de décollement du plateau d'impression liés au flux d'air."
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid ""
+"If estimated layer time is below ~5s fan will run by default to100% (except\n"
+"                                            for the first 3 layers where the fan is disabled) and print speed will be\n"
+"                                            reduced so that no less than 5s are spent on that layer (however, speed will\n"
+"                                            never be reduced below 10mm/s or up to 90% reduction)."
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid ""
+"If estimated layer time is below ~60s, but still greater than ~5s, fan will\n"
+"                                            run at a proportionally increasing speed between 35% and 100%, at 100% over\n"
+"                                            bridges if it's above the current computed fan speed ; except for the first\n"
+"                                            3 layers where the fan is disabled."
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__only_one_perimeter_top_other_algo
+msgid ""
+"If you have some problem with the 'Only one perimeter on Top surfaces' "
+"option, you can try to activate this on the problematic layer."
+msgstr ""
+"Si vous avez un problème avec l'option 'Un seul périmètre sur les surfaces "
+"du dessus' vous pouvez essayer d'activer cette option sur la couche "
+"problématique."
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_retract_lift
+msgid ""
+"If you set this to a positive value, Z is quickly raised every time a "
+"retraction is triggered. When using multiple extruders, only the setting for"
+" the first extruder will be considered. (mm, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_retract_lift_above
+msgid ""
+"If you set this to a positive value, Z lift will only take place above the "
+"specified absolute Z. You can tune this setting for skipping lift on the "
+"first layers. (mm, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_retract_lift_below
+msgid ""
+"If you set this to a positive value, Z lift will only take place below the "
+"specified absolute Z. You can tune this setting for limiting lift to the "
+"first layers. (mm, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__image
+msgid "Image to show in the client website"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Important for the next fields"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Infill"
+msgstr "Remplissage"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_acceleration
+msgid "Infill acceleration"
+msgstr "Acceleration pour remplissages"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_anchor
+msgid "Infill anchor"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_anchor_max
+msgid "Infill anchor max"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_connection
+msgid "Infill connection"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_connection_bottom
+msgid "Infill connection bottom"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_connection_solid
+msgid "Infill connection solid"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_connection_top
+msgid "Infill connection top"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_dense
+msgid "Infill dense"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_dense_algo
+msgid "Infill dense algo"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_every_layers
+msgid "Infill every layers"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_extruder
+msgid "Infill extruder"
+msgstr "Extrudeuse pour le remplissage"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_extrusion_spacing
+msgid "Infill extrusion spacing"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_extrusion_width
+msgid "Infill extrusion width"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_first
+msgid "Infill first"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_only_where_needed
+msgid "Infill only where needed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_overlap
+msgid "Infill overlap"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__infill_speed
+msgid "Infill speed"
+msgstr "Vitesses pour les remplissages"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__inherits
+msgid "Inherits"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__interface_shells
+msgid "Interface shells"
+msgstr "Création d'interface entre coques"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__perimeter_round_corners
+msgid ""
+"Internal perimeters will go around sharp corners by turning around instead "
+"of making the same sharp corner. This can help when there are visible holes "
+"in sharp corners on perimeters"
+msgstr ""
+"Les périmètres internes contourneront les angles aigus en créant un rayon au"
+" lieu de faire un angle aigu. Cela peut aider quand il y a des trous "
+"visibles dans les coins aigus des périmètres"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__ironing
+msgid "Ironing"
+msgstr "Lissage"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Ironing Post-Process"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__ironing_angle
+msgid "Ironing angle"
+msgstr "Angle de lissage"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__ironing_flowrate
+msgid "Ironing flowrate"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__ironing_spacing
+msgid "Ironing spacing"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__ironing_speed
+msgid "Ironing speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__ironing_type
+msgid "Ironing type"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Jerk limits"
+msgstr "Limites de mouvements brusques"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__perimeter_loop
+msgid ""
+"Join the perimeters to create only one continuous extrusion without any "
+"z_hop. Long inside travel (from external to holes) are not extruded to give "
+"some space to the infill."
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder____last_update
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__write_uid
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__write_date
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Layer Height"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__layer_gcode
+msgid "Layer gcode"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__layer_height
+msgid "Layer height"
+msgstr "Hauteur couche"
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,complete_objects_sort:0
+msgid "Lowest Y"
+msgstr ""
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,complete_objects_sort:0
+msgid "Lowest Z"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Machine Limits"
+msgstr "Limites de la machine"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Machine limits"
+msgstr "Limites de la machine"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_limits_usage
+msgid "Machine limits usage"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_max_acceleration_e
+msgid "Machine max acceleration e"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_max_acceleration_extruding
+msgid "Machine max acceleration extruding"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_max_acceleration_retracting
+msgid "Machine max acceleration retracting"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_max_acceleration_travel
+msgid "Machine max acceleration travel"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_max_acceleration_x
+msgid "Machine max acceleration x"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_max_acceleration_y
+msgid "Machine max acceleration y"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_max_acceleration_z
+msgid "Machine max acceleration z"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_max_feedrate_e
+msgid "Machine max feedrate e"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_max_feedrate_x
+msgid "Machine max feedrate x"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_max_feedrate_y
+msgid "Machine max feedrate y"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_max_feedrate_z
+msgid "Machine max feedrate z"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_max_jerk_e
+msgid "Machine max jerk e"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_max_jerk_x
+msgid "Machine max jerk x"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_max_jerk_y
+msgid "Machine max jerk y"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_max_jerk_z
+msgid "Machine max jerk z"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_min_extruding_rate
+msgid "Machine min extruding rate"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__machine_min_travel_rate
+msgid "Machine min travel rate"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__max_fan_speed
+msgid "Max fan speed"
+msgstr "Vitesse maximale du ventilateur"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__max_layer_height
+msgid "Max layer height"
+msgstr "Hauteur de couche maximum"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__max_print_height
+msgid "Max print height"
+msgstr "Hauteur maximale d'impression"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__max_print_speed
+msgid "Max print speed"
+msgstr "Vitesse d'impression maximale"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__max_speed_reduction
+msgid "Max speed reduction"
+msgstr "Réduction de la vitesse maximale"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__max_volumetric_speed
+msgid "Max volumetric speed"
+msgstr "Vitesse volumétrique maximale"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__wipe_tower_bridging
+msgid ""
+"Maximal distance between supports on sparse infill sections. (mm, default: "
+"10)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Maximum accelerations"
+msgstr "Accélérations maximums"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__hole_size_threshold
+msgid ""
+"Maximum area for the hole where the hole_size_compensation will apply fully."
+" After that, it will decrease down to 0 for four times this area. Set to 0 "
+"to let the hole_size_compensation apply fully for all detected holes (mm², "
+"default: 100)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__hole_to_polyhole_threshold
+msgid ""
+"Maximum defection of a point to the estimated radius of the circle. As "
+"cylinders are often exported as triangles of varying size, points may not be"
+" on the circle circumference. This setting allows you some leway to broaden "
+"the detection. In mm or in % of the radius. (mm², default: 0.01)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__curve_smoothing_cutoff_dist
+msgid ""
+"Maximum distance between two points to allow adding new ones. Allow to "
+"avoiddistorting long strait areas. 0 to disable. (mm, default: 2)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Maximum feedrates"
+msgstr "Vitesses maximums"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__milling_after_z
+msgid "Milling after z"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__milling_count
+msgid "Milling count"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__milling_diameter
+msgid "Milling diameter"
+msgstr "Diamètre de fraisage"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__milling_extra_size
+msgid "Milling extra size"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__milling_post_process
+msgid "Milling post process"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__milling_speed
+msgid "Milling speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__milling_toolchange_end_gcode
+msgid "Milling toolchange end gcode"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__milling_toolchange_start_gcode
+msgid "Milling toolchange start gcode"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__milling_z_lift
+msgid "Milling z lift"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__min_fan_speed
+msgid "Min fan speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__min_layer_height
+msgid "Min layer height"
+msgstr "Hauteur de couche minimum"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__min_length
+msgid "Min length"
+msgstr "Longueur minimale"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__min_print_speed
+msgid "Min print speed"
+msgstr "Vitesse d'impression minimale"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__min_skirt_length
+msgid "Min skirt length"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__min_width_top_surface
+msgid "Min width top surface"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__curve_smoothing_angle_concave
+msgid ""
+"Minimum (concave) angle at a vertex to enable smoothing (trying to create a "
+"curve around the vertex). 180 : nothing will be smooth, 0 : all angles will "
+"be smoothened. (°, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__curve_smoothing_angle_convex
+msgid ""
+"Minimum (convex) angle at a vertex to enable smoothing (trying to create a "
+"curve around the vertex). 180 : nothing will be smooth, 0 : all angles will "
+"be smoothened. (°, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__resolution
+msgid ""
+"Minimum detail resolution, used to simplify the input file for speeding up "
+"the slicing job and reducing memory usage. High_resolution models often "
+"carry more details than printers can render. Set to zero to disable any "
+"simplification and use full resolution from input. Note: Slic3r has an "
+"internal working resolutionof 0.0001mm. Infill & Thin areas are simplified "
+"up to 0.0125mm. (mm, default: 0.002)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Minimum feedrates"
+msgstr "Vitesses minimums"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__overhangs_width_speed
+msgid ""
+"Minimum unsupported width for an extrusion to apply the bridge fan & "
+"overhang speed to this overhang. Can be in mm or in a % of the nozzle "
+"diameter. Set to 0 to deactivate. (default: 55%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__overhangs_width
+msgid ""
+"Minimum unsupported width for an extrusion to apply the bridge flow to this "
+"overhang. Can be in mm or in a % of the nozzle diameter. Set to 0 to "
+"deactivate. (default: 75%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__thin_walls_min_width
+msgid ""
+"Minimum width for the extrusion to be extruded (widths lower than the nozzle"
+" diameter will be over_extruded at the nozzle diameter). If expressed as "
+"percentage (for example 110%) it will be computed over nozzle diameter. The "
+"default behavior of PrusaSlicer is with a 33% value. Put 100% to avoid any "
+"sort of over_extrusion. (default: 33%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__model_precision
+msgid "Model precision"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Modifiers"
+msgstr "Modificateurs"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Modifying Slices"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Multimaterial"
+msgstr "Multimatériaux"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Multimaterial toolchange string reduction"
+msgstr "Réduction de chaîne de changement de filaments multi-matériaux"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Multimaterial toolchange temperature"
+msgstr "Température de changement de filaments multi-matériaux"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Multiple Extruders"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__name
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Name"
+msgstr "Nom"
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,perimeter_loop_seam:0
+msgid "Nearest"
+msgstr "Au plus près"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__no_perimeter_unsupported_algo
+msgid "No perimeter unsupported algo"
+msgstr ""
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,support_material_contact_distance_type:0
+msgid "None"
+msgstr "Aucun"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__notes
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Notes"
+msgstr "Remarques"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__nozzle_diameter
+msgid "Nozzle diameter"
+msgstr "Diamètre de la buse"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__message_has_error_counter
+msgid "Number of error"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__overhangs_reverse_threshold
+msgid ""
+"Number of mm the overhang need to be for the reversal to be considered "
+"useful. Can be a % of the perimeter width. (default: 250%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__bottom_solid_layers
+msgid "Number of solid layers to generate on bottom surfaces. (default: 3)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__top_solid_layers
+msgid "Number of solid layers to generate on top surfaces. (default: 3)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__external_perimeters_nothole
+msgid ""
+"Only do the vase trick on the external side. Useful when the thickness is "
+"too low."
+msgstr ""
+"Ne faites le périmètre extérieur en premier que sur le côté extérieur. Utile"
+" quand l'épaisseur est trop faible."
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__external_perimeters_hole
+msgid ""
+"Only do the vase trick on the external side. Useful when you only want to "
+"remove seam from screw hole."
+msgstr ""
+"Ne faites le périmètre extérieur en premier que sur le côté intérieur. Utile"
+" quand vous voulez seulement retirer la couture des trous de vis."
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__only_one_perimeter_top
+msgid "Only one perimeter top"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__only_one_perimeter_top_other_algo
+msgid "Only one perimeter top other algo"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__only_retract_when_crossing_perimeters
+msgid "Only retract when crossing perimeters"
+msgstr "Rétracter uniquement lors du franchissement de parois"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__ooze_prevention
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Ooze prevention"
+msgstr "Prévention des coulures"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__avoid_crossing_perimeters
+msgid ""
+"Optimize travel moves in order to minimize the crossing of perimeters. This "
+"is mostly useful with Bowden extruders which suffer from oozing. This "
+"feature slows down both the print and the G_code generation."
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Options for support material and raft"
+msgstr "Options pour le matériau de support et le radeau"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Options for support material interface"
+msgstr "Options pour l'interface des supports"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Other"
+msgstr "Autre"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Output Options"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Output file"
+msgstr "Fichier de sortie"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__output_filename_format
+msgid "Output filename format"
+msgstr "Format du nom de fichier de sortie"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__over_bridge_flow_ratio
+msgid "Over bridge flow ratio"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Overhangs"
+msgstr "Surplombs"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__overhangs_reverse
+msgid "Overhangs reverse"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__overhangs_reverse_threshold
+msgid "Overhangs reverse threshold"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__overhangs_speed
+msgid "Overhangs speed"
+msgstr "Vitesse des porte-à-faux"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__overhangs_width
+msgid "Overhangs width"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__overhangs_width_speed
+msgid "Overhangs width speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Overlap"
+msgstr "Chevauchement"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__thin_walls_overlap
+msgid ""
+"Overlap between the thin wall and the perimeters. Can be a % of the external"
+" perimeter width (default 50%) (default: 50%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__parking_pos_retraction
+msgid "Parking pos retraction"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__brim_ears_pattern
+msgid ""
+"Pattern for the ear. The concentric is the default one. The rectilinear has "
+"a perimeter around it, you can try it if the concentric has too many "
+"problems to stick to the build plate. (concentric, rectilinear; default: "
+"concentric)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__pause_print_gcode
+msgid "Pause print gcode"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__perimeter_acceleration
+msgid "Perimeter acceleration"
+msgstr "Acceleration pour les périmètres"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__perimeter_bonding
+msgid "Perimeter bonding"
+msgstr "Collage du périmètre"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__perimeter_extruder
+msgid "Perimeter extruder"
+msgstr "Extrudeuse pour les périmètres"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__perimeter_extrusion_spacing
+msgid "Perimeter extrusion spacing"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__perimeter_extrusion_width
+msgid "Perimeter extrusion width"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__perimeter_loop
+msgid "Perimeter loop"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__perimeter_loop_seam
+msgid "Perimeter loop seam"
+msgstr "Jointure en boucle sur le périmètre"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__perimeter_overlap
+msgid "Perimeter overlap"
+msgstr "Chevauchement du périmètre"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__perimeter_round_corners
+msgid "Perimeter round corners"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__perimeter_speed
+msgid "Perimeter speed"
+msgstr "Vitesses pour les parois"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__perimeters
+msgid "Perimeters"
+msgstr "Périmètres"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Perimeters And Shell"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Platter"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__perimeter_loop_seam
+msgid "Position of perimeters starting points. (nearest, rear; default: rear)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__seam_position
+msgid ""
+"Position of perimeters' starting points. (cost, random, aligned, rear; "
+"default: cost)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__post_process
+msgid "Post process"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Post-Process script"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Post-Processing milling"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Print Settings"
+msgstr "Réglages de l'Impression"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__external_perimeters_first
+msgid ""
+"Print contour perimeters from the outermost one to the innermost one instead"
+" of the default inverse order."
+msgstr ""
+"Imprimer les périmètres de l'extérieur vers l'intérieur au lieu de l'ordre "
+"par défaut qui est inversé."
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__external_perimeters_vase
+msgid ""
+"Print contour perimeters in two circles, in a continuous way, like for a "
+"vase mode. It needs the external_perimeters_first parameter to work. Doesn't"
+" work for the first layer, as it may damage the bed overwise. Note that it "
+"will use min_layer_height from your hardware setting as the base height (it "
+"doesn't start at 0), so be sure to put here the lowest value your printer "
+"can handle. if it's not lower than two times the current layer height, it "
+"falls back to the normal algorithm, as there is not enough room to do two "
+"loops."
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__print_extrusion_multiplier
+msgid "Print extrusion multiplier"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__print_host
+msgid "Print host"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__print_retract_length
+msgid "Print retract length"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__print_retract_lift
+msgid "Print retract lift"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__print_settings_id
+msgid "Print settings id"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Print speed override"
+msgstr "Contournement de la vitesse d'impression"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__print_temperature
+msgid "Print temperature"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Printer Settings"
+msgstr "Réglages de l'Imprimante"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__printer_model
+msgid "Printer model"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__printer_notes
+msgid "Printer notes"
+msgstr "Notes de l'imprimante"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__printer_settings_id
+msgid "Printer settings id"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__printer_technology
+msgid "Printer technology"
+msgstr "Technologie de l'imprimante"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__printer_variant
+msgid "Printer variant"
+msgstr "Variante d'imprimante"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__printer_vendor
+msgid "Printer vendor"
+msgstr "Fabriquant de l'imprimante"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__printhost_apikey
+msgid "Printhost apikey"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__printhost_cafile
+msgid "Printhost cafile"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__printhost_port
+msgid "Printhost port"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__profile
+#: model:ir.ui.menu,name:web_slicing_profile.slicing_profile
+msgid "Profile"
+msgstr "Profil d'impression"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Profile Form"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__image
+msgid "Profile Image"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Profile Name"
+msgstr "Nom du Profil d'impression"
+
+#. module: web_slicing_profile
+#: model:ir.actions.act_window,name:web_slicing_profile.slicing_profile_action_view_action_window
+msgid "Profiles"
+msgstr "Profils d'impression"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Quality"
+msgstr "Qualité"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Raft"
+msgstr "Radeau"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__raft_layers
+msgid "Raft layers"
+msgstr "Couches du radeau"
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,perimeter_loop_seam:0
+msgid "Rear"
+msgstr "Arrière"
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,brim_ears_pattern:0
+#: selection:slicing.profile,support_material_pattern:0
+msgid "Rectilinear"
+msgstr "Rectiligne"
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,support_material_pattern:0
+msgid "Rectilinear grid"
+msgstr "Grille rectiligne"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Reducing Printing Time"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__remaining_times
+msgid "Remaining times"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__resolution
+msgid "Resolution"
+msgstr "Résolution"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__retract_before_travel
+msgid "Retract before travel"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__retract_before_wipe
+msgid "Retract before wipe"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__retract_layer_change
+msgid "Retract layer change"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__retract_length
+msgid "Retract length"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__retract_length_toolchange
+msgid "Retract length toolchange"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__retract_lift
+msgid "Retract lift (Z)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__retract_lift_above
+msgid "Retract lift above Z"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__retract_lift_below
+msgid "Retract lift below Z"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__retract_lift_first_layer
+msgid "Retract lift first layer"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__retract_lift_top
+msgid "Retract lift top"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__retract_restart_extra
+msgid "Retract restart extra"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__retract_restart_extra_toolchange
+msgid "Retract restart extra toolchange"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__retract_speed
+msgid "Retract speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Retraction"
+msgstr "Rétraction"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_retract_before_travel
+msgid ""
+"Retraction is not triggered when travel moves are shorter than this length. "
+"(mm, default: 2)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,complete_objects_sort:0
+msgid "Right Panel"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__seam_angle_cost
+msgid "Seam angle cost"
+msgstr "Coût de l'angle de jointure"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__seam_position
+msgid "Seam position"
+msgstr "Position des jointures"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__seam_travel_cost
+msgid "Seam travel cost"
+msgstr "Coût du déplacement de la jointure"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__hole_to_polyhole
+msgid ""
+"Search for almost_circular holes that span more than one layer and convert "
+"the geometry to polyholes. Use the nozzle size and the (biggest) diameter to"
+" compute the polyhole. See "
+"http://hydraraptor.blogspot.com/2011/02/polyholes.html"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Sequential printing"
+msgstr "Impression séquentielle"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__z_step
+msgid ""
+"Set this to the height moved when your Z motor (or equivalent) turns one "
+"step.If your motor needs 200 steps to move your head/plater by 1mm, this "
+"field should be 1/200 = 0.005. Note that the gcode will write the z values "
+"with 6 digits after the dot if z_step is set (it's 3 digits if it's "
+"disabled). Put 0 to disable. (mm, default: 0.005)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Short layer time - began to increase base fan speed"
+msgstr ""
+"Temps de couche court - commence à augmenter la vitesse du ventilateur de "
+"base"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__silent_mode
+msgid "Silent mode"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__single_extruder_multi_material
+msgid "Single extruder multi material"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__single_extruder_multi_material_priming
+msgid "Single extruder multi material priming"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Size and coordinates"
+msgstr "Taille et coordonnées"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_use_skinnydip
+msgid ""
+"Skinnydip performs a secondary dip into the meltzone to burn off fine "
+"strings of filament (default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Skirt"
+msgstr "Jupe"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Skirt And Brim"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__skirt_distance
+msgid "Skirt distance"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__skirt_extrusion_width
+msgid "Skirt extrusion width"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__skirt_height
+msgid "Skirt height"
+msgstr "Hauteur de la jupe"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__skirts
+msgid "Skirts"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__slice_closing_radius
+msgid "Slice closing radius"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Slicing"
+msgstr "Couche"
+
+#. module: web_slicing_profile
+#: model:ir.ui.menu,name:web_slicing_profile.root_web_slicing_profile
+msgid "Slicing Profile"
+msgstr "Profil d'impression"
+
+#. module: web_slicing_profile
+#: model:ir.model,name:web_slicing_profile.model_slicing_profile
+msgid "Slicing Profile Settings"
+msgstr "Paramètres de Profil d'impression"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__slowdown_below_layer_time
+msgid "Slowdown below layer time"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__small_perimeter_max_length
+msgid "Small perimeter max length"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__small_perimeter_min_length
+msgid "Small perimeter min length"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__small_perimeter_speed
+msgid "Small perimeter speed"
+msgstr "Petite vitesse périphérique"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__solid_fill_pattern
+msgid "Solid fill pattern"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__solid_infill_below_area
+msgid "Solid infill below area"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__solid_infill_every_layers
+msgid "Solid infill every layers"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__solid_infill_extruder
+msgid "Solid infill extruder"
+msgstr "Extrudeuse pour le remplissage plein"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__solid_infill_extrusion_spacing
+msgid "Solid infill extrusion spacing"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__solid_infill_extrusion_width
+msgid "Solid infill extrusion width"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__solid_infill_speed
+msgid "Solid infill speed"
+msgstr "Vitesse des remplissages plein"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Speed"
+msgstr "Vitesse"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Speed for non-print moves"
+msgstr "Vitesse pour les déplacements sans impression"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Speed for print moves"
+msgstr "Vitesse pour les déplacements d'impression"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_loading_speed_start
+msgid "Speed used at the very beginning of loading phase. (mm/s, default: 3)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_loading_speed
+msgid ""
+"Speed used for loading the filament on the wipe tower. (mm/s, default: 28)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_unloading_speed
+msgid ""
+"Speed used for unloading the filament on the wipe tower (does not affect "
+"initial part of unloading just after ramming). (mm/s, default: 90)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_unloading_speed_start
+msgid ""
+"Speed used for unloading the tip of the filament immediately after ramming. "
+"(mm/s, default: 100)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__spiral_vase
+msgid "Spiral vase"
+msgstr "Vase spirale"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__standby_temperature_delta
+msgid "Standby temperature delta"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Start G-code"
+msgstr "G-Code de début"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__start_filament_gcode
+msgid "Start filament gcode"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__start_gcode
+msgid "Start gcode"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__start_gcode_manual
+msgid "Start gcode manual"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_melt_zone_pause
+msgid ""
+"Stay in melt zone for this amount of time before extracting the filament. "
+"Not usually necessary. (milliseconds, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Support Material"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material
+msgid "Support material"
+msgstr "Support"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_angle
+msgid "Support material angle"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_auto
+msgid "Support material auto"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_buildplate_only
+msgid "Support material buildplate only"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_contact_distance_bottom
+msgid "Support material contact distance bottom"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_contact_distance_top
+msgid "Support material contact distance top"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_contact_distance_type
+msgid "Support material contact distance type"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_enforce_layers
+msgid "Support material enforce layers"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_extruder
+msgid "Support material extruder"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_extrusion_width
+msgid "Support material extrusion width"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_interface_contact_loops
+msgid "Support material interface contact loops"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_interface_extruder
+msgid "Support material interface extruder"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_interface_layers
+msgid "Support material interface layers"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_interface_pattern
+msgid "Support material interface pattern"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_interface_spacing
+msgid "Support material interface spacing"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_interface_speed
+msgid "Support material interface speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_pattern
+msgid "Support material pattern"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_solid_first_layer
+msgid "Support material solid first layer"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_spacing
+msgid "Support material spacing"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_speed
+msgid "Support material speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_synchronize_layers
+msgid "Support material synchronize layers"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_threshold
+msgid "Support material threshold"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_with_sheath
+msgid "Support material with sheath"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__support_material_xy_spacing
+msgid "Support material xy spacing"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__temperature
+msgid "Temperature"
+msgstr "Température"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__standby_temperature_delta
+msgid ""
+"Temperature difference to be applied when an extruder is not active. Enables"
+" a full_height 'sacrificial' skirt on which the nozzles are periodically "
+"wiped. (∆°C, default: -5)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Temperature ℃"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__template_custom_gcode
+msgid "Template custom gcode"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__hole_size_compensation
+msgid ""
+"The convex holes will be grown / shrunk in the XY plane by the configured "
+"value (negative = inwards, positive = outwards, should be negative as the "
+"holes are always a bit smaller irl). This might be useful for fine_tuning "
+"hole sizes. This setting behaves the same as 'Inner XY size compensation' "
+"but only for convex shapes. It's added to 'Inner XY size compensation', it "
+"does not replace it. (mm, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__first_layer_size_compensation
+msgid ""
+"The first layer will be grown / shrunk in the XY plane by the configured "
+"value to compensate for the 1st layer squish aka an Elephant Foot effect. "
+"(should be negative = inwards) (mm, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__avoid_crossing_perimeters_max_detour
+msgid ""
+"The maximum detour length for avoid crossing perimeters. If the detour is "
+"longer than this value, avoid crossing perimeters is not applied for this "
+"travel path. Detour length could be specified either as an absolute value or"
+" as percentage (for example 50%) of a direct travel path. (mm or % (zero to "
+"disable), default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__bottom_solid_min_thickness
+msgid ""
+"The number of bottom solid layers is increased above bottom_solid_layers if "
+"necessary to satisfy minimum thickness of bottom shell. (mm, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__top_solid_min_thickness
+msgid ""
+"The number of top solid layers is increased above top_solid_layers if "
+"necessaryto satisfy minimum thickness of top shell. This is useful to "
+"prevent pillowing effect when printing with variable layer height. (mm, "
+"default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__xy_size_compensation
+msgid ""
+"The object will be grown/shrunk in the XY plane by the configured value "
+"(negative = inwards, positive = outwards). This might be useful for "
+"fine_tuning sizes. This one only applies to the 'exterior' shell of the "
+"object. !!! it's recommended you put the same value into the 'Inner XY size "
+"compensation', unless you are sure you don't have horizontal holes. !!! (mm,"
+" default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__xy_inner_size_compensation
+msgid ""
+"The object will be grown/shrunk in the XY plane by the configured value "
+"(negative = inwards, positive = outwards). This might be useful for "
+"fine_tuning sizes. This one only applies to the 'inner' shell of the object "
+"(!!! horizontal holes break the shell !!!) (mm, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_wipe_advanced_pigment
+msgid ""
+"The pigment % for this filament (bewteen 0 and 1, 1=100%). 0 for "
+"translucent/natural, 0.2_0.5 for white and 1 for black. (default: 0.5)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: sql_constraint:slicing.profile:0
+msgid "The profile name should be unique!"
+msgstr "Le nom du Profil d'impression doit être unique"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_deretract_speed
+msgid ""
+"The speed for loading of a filament into extruder after retraction (this "
+"only applies to the extruder motor). If left as zero, the retraction speed "
+"is used. (mm/s, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_retract_speed
+msgid ""
+"The speed for retractions (this only applies to the extruder motor). (mm/s, "
+"default: 40)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__wipe_advanced_multiplier
+msgid ""
+"The volume multiplier used to compute the final volume to extrude by the "
+"algorithm. (mm3, default: 60)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__wipe_advanced_nozzle_melted_volume
+msgid ""
+"The volume of melted plastic inside your nozzle. Used by 'advanced wiping'. "
+"(mm3, default: 120)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__curve_smoothing_precision
+msgid ""
+"These parameters allow the slicer to smooth the angles in each layer. The "
+"precision will be at least the new precision of the curve. Set to 0 to "
+"deactivate. Note: as it uses the polygon's edges and only works in the 2D "
+"planes, you must have a very clean or hand_made 3D model. It's really only "
+"useful to smoothen functional models or very wide angles. (mm, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__thin_perimeters
+msgid "Thin perimeters"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__thin_perimeters_all
+msgid "Thin perimeters all"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__thin_walls
+msgid "Thin walls"
+msgstr "Murs minces"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__thin_walls_merge
+msgid "Thin walls merge"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__thin_walls_min_width
+msgid "Thin walls min width"
+msgstr "Largeur minimale des parois minces"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__thin_walls_overlap
+msgid "Thin walls overlap"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__thin_walls_speed
+msgid "Thin walls speed"
+msgstr "Vitesse des parois minces"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__color_change_gcode
+msgid ""
+"This G_code will be used as a code for the color change (default: M600)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__pause_print_gcode
+msgid "This G_code will be used as a code for the pause print (default: M601)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__template_custom_gcode
+msgid "This G_code will be used as a custom code"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__infill_every_layers
+msgid ""
+"This feature allows you to combine infill and speed up your print by "
+"extruding thicker infill layers while preserving thin perimeters, thus "
+"accuracy. (layers, default: 1)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__solid_infill_every_layers
+msgid ""
+"This feature allows you to force a solid layer every given number of "
+"layers.Zero to disable. You can set this to any value (for example 9999); "
+"Slic3r will automatically choose the maximum possible number of layers to "
+"combine according to nozzle diameter and layer height. (layers, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__spiral_vase
+msgid ""
+"This feature will raise Z gradually while printing a single_walled object in"
+" order to remove any visible seam. This option requires a single perimeter, "
+"no infill, no top solid layers and no support material. You can still set "
+"any number of bottom solid layers as well as skirt/brim loops. It won't work"
+" when printing more than one single object."
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_retract_layer_change
+msgid ""
+"This flag enforces a retraction whenever a Z move is done (before it). "
+"(default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_wipe
+msgid ""
+"This flag will move the nozzle while retracting to minimize the possible "
+"blob on leaky extruders. (default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__fill_smooth_distribution
+msgid ""
+"This is the percentage of the flow that is used for the second ironing pass."
+" Typical 10_20%. Should not be higher than 20%, unless you have your top "
+"extrusion width greatly superior to your nozzle width. A value too low and "
+"your extruder will eat the filament. A value too high and the first pass "
+"won't print well. (%, default: 10%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__model_precision
+msgid ""
+"This is the rounding error of the input object. It's used to align points "
+"that should be in the same line. Put 0 to disable. (mm, default: 0.0001)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__fill_smooth_width
+msgid ""
+"This is the width of the ironing pass, in a % of the top infill extrusion "
+"width, should not be more than 50% (two times more lines, 50% overlap). It's"
+" not necessary to go below 25% (four times more lines, 75% overlap). If you "
+"have problems with your ironing process, don't forget to look at the "
+"flow_>above bridge flow, as this setting should be set to min 110% to let "
+"you have enough plastic in the top layer. A value too low will make your "
+"extruder eat the filament. (mm/%, default: 50%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__perimeters
+msgid ""
+"This option sets the number of perimeters to generate for each layer. Note "
+"that Slic3r may increase this number automatically when it detects sloping "
+"surfaces which benefit from a higher number of perimeters if the Extra "
+"Perimeters option is enabled. ((minimum)., default: 3)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__infill_only_where_needed
+msgid ""
+"This option will limit infill to the areas actually needed for supporting "
+"ceilings (it will act as internal support material). If enabled, this slows "
+"down the G_code generation due to the multiple checks involved."
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__bridged_infill_margin
+msgid ""
+"This parameter grows the bridged solid infill layers by the specified mm to "
+"anchor them into the part. Put 0 to deactivate it. Can be a % of the width "
+"of the external perimeter. (mm/%, default: 200%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__external_infill_margin
+msgid ""
+"This parameter grows the top/bottom/solid layers by the specified mm to "
+"anchor them into the part. Put 0 to deactivate it. Can be a % of the width "
+"of the perimeters. (mm/%, default: 150%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__exact_last_layer_height
+msgid ""
+"This setting controls the height of last object layers to put the last layer"
+" at the exact highest height possible. Experimental."
+msgstr ""
+"Ce paramètre fonctionne mal, ne l'utilisez pas. Il aurait dû placer la "
+"dernière couche exactement à la hauteur de l'objet."
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_max_wipe_tower_speed
+msgid ""
+"This setting is used to set the maximum speed when extruding inside the wipe"
+" tower (use M220). In %, set 0 to disable and use the Filament type instead."
+" If disabled, these filament types will have a defaut value of: _ PVA: 80% "
+"to 60% _ SCAFF: 35% _ FLEX: 35% _ OTHERS: 100% Note that the wipe tower "
+"reset the speed at 100% for the unretract in any case. If using marlin, M220"
+" B/R is used to save the speed override before the wipe tower print. (%, "
+"default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__perimeter_bonding
+msgid ""
+"This setting may slightly degrade the quality of your external perimeter, in"
+" exchange for a better bonding between perimeters.Use it if you have great "
+"difficulties with perimeter bonding, for example with high temperature "
+"filaments. This percentage is the % of overlap between perimeters, a bit "
+"like perimeter_overlap and external_perimeter_overlap, but in reverse. You "
+"have to set perimeter_overlap and external_perimeter_overlap to 100%, or "
+"this setting has no effect. 0: no effect, 50%: half of the nozzle will be "
+"over an already extruded perimeter while extruding a new one, unless it's an"
+" external one). It's very experimental, please report about the usefulness. "
+"It may be removed if there is no use for it. (%, default: 0%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__gap_fill_min_area
+msgid ""
+"This setting represents the minimum mm² for a gapfill extrusion to be "
+"created. Can be a % of (perimeter width)² (default: 100%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_ramming_parameters
+msgid ""
+"This string is edited by RammingDialog and contains ramming specific "
+"parameters. (default: '120 100 6.6 6.8 7.2 7.6 7.9 8.2 8.7 9.4 9.9 10.0| "
+"0.05 6.6 0.45 6.8 0.95 7.8 1.45 8.3 1.95 9.7 2.45 10 2.95 7.6 3.45 7.6 3.95 "
+"7.6 4.45 7.6 4.95 7.6')"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__threads
+msgid "Threads"
+msgstr "Threads"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Thumbnails"
+msgstr "Vignettes"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__thumbnails
+msgid "Thumbnails (x_small x y_small , x_big x y_big)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__thumbnails_color
+msgid "Thumbnails color"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__thumbnails_custom_color
+msgid "Thumbnails custom color"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__thumbnails_with_bed
+msgid "Thumbnails with bed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__time_estimation_compensation
+msgid "Time estimation compensation"
+msgstr "Compensation de l'estimation du temps"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_load_time
+msgid ""
+"Time for the printer firmware (or the Multi Material Unit 2.0) to load a new"
+" filament during a tool change (when executing the T code). This time is "
+"added to the total print time by the G_code time estimator. (s, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_unload_time
+msgid ""
+"Time for the printer firmware (or the Multi Material Unit 2.0) to unload a "
+"filament during a tool change (when executing the T code). This time is "
+"added to the total print time by the G_code time estimator. (s, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_toolchange_delay
+msgid ""
+"Time to wait after the filament is unloaded. May help to get reliable "
+"toolchanges with flexible materials that may need more time to shrink to "
+"original dimensions. (s, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_toolchange_temp
+msgid ""
+"To further reduce stringing, it can be helpful to set a lower temperature "
+"just prior to extracting filament from the hotend. (°C, default: 200)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__tool_name
+msgid "Tool name"
+msgstr "Nom extrudeuse"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Toolchange G-code"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__toolchange_gcode
+msgid "Toolchange gcode"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Toolchange parameters with single extruder MM printers"
+msgstr ""
+"Paramètres de changement de filament pour les imprimantes multi-matériaux "
+"mono-extrudeuse"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__top_fan_speed
+msgid "Top fan speed"
+msgstr "Vitesse du ventilateur pour le dessus"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__top_fill_pattern
+msgid "Top fill pattern"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__top_infill_extrusion_spacing
+msgid "Top infill extrusion spacing"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__top_infill_extrusion_width
+msgid "Top infill extrusion width"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__top_solid_infill_speed
+msgid "Top solid infill speed"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__top_solid_layers
+msgid "Top solid layers"
+msgstr "Couches pleines du dessus"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__top_solid_min_thickness
+msgid "Top solid min thickness"
+msgstr ""
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,ironing_type:0
+msgid "Topmost surface only"
+msgstr "Uniquement la partie supérieure de la surface"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__travel_speed
+msgid "Travel speed"
+msgstr "Vitesse de déplacement"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__travel_speed_z
+msgid "Travel speed z"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,machine_limits_usage:0
+msgid "Use also for time estimate"
+msgstr "Utiliser aussi pour l'estimation du temps"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__use_firmware_retraction
+msgid "Use firmware retraction"
+msgstr "Utiliser la rétraction du firmware"
+
+#. module: web_slicing_profile
+#: selection:slicing.profile,machine_limits_usage:0
+msgid "Use only as safeguards"
+msgstr "Utiliser uniquement pour sauvegarde"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__only_one_perimeter_top
+msgid ""
+"Use only one perimeter on flat top surface, to give more space to the top "
+"infill pattern."
+msgstr ""
+"N'utiliser qu'un seul périmètre sur les surfaces plates du dessus, pour "
+"laisser plus de place au motif de dessus."
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__use_relative_e_distances
+msgid "Use relative e distances"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__use_volumetric_e
+msgid "Use volumetric e"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_dip_insertion_speed
+msgid "Usually not necessary to change this (mm/sec, default: 33)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_dip_extraction_speed
+msgid "Usually not necessary to change this (mm/sec, default: 70)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__variable_layer_height
+msgid "Variable layer height"
+msgstr "Hauteur de couche variable"
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Vertical Shells"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Very short layer time - began to decrease extrusion rate"
+msgstr "Temps de couche très court - commence à diminuer le taux d'extrusion"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__clip_multipart_objects
+msgid ""
+"When printing multi_material objects, this settings will make Slic3r to clip"
+" the overlapping object parts one by the other (2nd part will be clipped by "
+"the 1st,3rd part will be clipped by the 1st and 2nd etc)."
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__first_layer_height
+msgid ""
+"When printing with very low layer heights, you might still want to print a "
+"thicker bottom layer to improve adhesion and tolerance for non perfect build"
+" plates. This can be expressed as an absolute value or as a percentage (for "
+"example: 75%) over the default nozzle width. (mm or %, default: 75%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__retract_length_toolchange
+msgid ""
+"When retraction is triggered before changing tool, filament is pulled back "
+"by the specified amount (the length is measured on raw filament, before it "
+"enters the extruder). (mm (zero to disable), default: 10)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_retract_length
+msgid ""
+"When retraction is triggered, filament is pulled back by the specified "
+"amount (the length is measured on raw filament, before it enters the "
+"extruder). (mm (zero to disable), default: 2)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__external_perimeter_fan_speed
+msgid ""
+"When set to a non-zero value this fan speed is used only for external "
+"perimeters (visible ones). Set to 1 to disable the fan. Set to -1 to use the"
+" normal fanspeed on external perimeters.External perimeters can benefit from"
+" higher fanspeed to improve surface finish, while internal perimeters, "
+"infill, etc. benefitfrom lower fan speed to improve layer adhesion. (%, "
+"default: -1)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__extra_loading_move
+msgid ""
+"When set to zero, the distance the filament is moved from parking position "
+"during load is exactly the same as it was moved back during unload. When "
+"positive, it is loaded further, if negative, the loading move is shorter "
+"than unloading. (mm, default: _2)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_wipe_extra_perimeter
+msgid ""
+"When the external perimeter loop extrusion ends, a wipe is done, going "
+"slightly inside the print. The number in this settting increases the wipe by"
+" moving the nozzle along the loop again before the final wipe. (mm, default:"
+" 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__retract_restart_extra_toolchange
+msgid ""
+"When the retraction is compensated after changing tool, the extruder will "
+"push this additional amount of filament. (mm, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_retract_restart_extra
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__retract_restart_extra
+msgid ""
+"When the retraction is compensated after the travel move, the extruder will "
+"push this additional amount of filament. This setting is rarely needed. (mm,"
+" default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Width And Flow"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__wipe_tower_width
+msgid "Width of a wipe tower (mm, default: 60)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__wipe_tower_brim
+msgid ""
+"Width of the brim for the wipe tower. Can be in mm or in % of the (assumed) "
+"only one nozzle diameter. (default: 150%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__wipe
+msgid "Wipe"
+msgstr "Essuyage"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__wipe_advanced
+msgid "Wipe advanced"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__wipe_advanced_algo
+msgid "Wipe advanced algo"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__wipe_advanced_multiplier
+msgid "Wipe advanced multiplier"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__wipe_advanced_nozzle_melted_volume
+msgid "Wipe advanced nozzle melted volume"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_extruder__wipe_extra_perimeter
+msgid "Wipe extra perimeter"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__wipe_tower
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Wipe tower"
+msgstr "Tour de purge"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__wipe_tower_bridging
+msgid "Wipe tower bridging"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__wipe_tower_brim
+msgid "Wipe tower brim"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__wipe_tower_no_sparse_layers
+msgid "Wipe tower no sparse layers"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model_terms:ir.ui.view,arch_db:web_slicing_profile.slicing_profile_view_form
+msgid "Wipe tower parameters"
+msgstr "Paramètres de la tour de purge"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__wipe_tower_rotation_angle
+msgid "Wipe tower rotation angle"
+msgstr "Angle de rotation de la tour de purge"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__wipe_tower_rotation_angle
+msgid "Wipe tower rotation angle with respect to x_axis. (°, default: 0)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__wipe_tower_width
+msgid "Wipe tower width"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__wipe_tower_x
+msgid "Wipe tower x"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__wipe_tower_y
+msgid "Wipe tower y"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__filament_retract_before_wipe
+msgid ""
+"With bowden extruders, it may be wise to do some amount of quick retract "
+"before doing the wipe movement. (%, default: 0%)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__wipe_tower_x
+msgid ""
+"X coordinate of the left front corner of a wipe tower (mm, default: 180)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__xy_inner_size_compensation
+msgid "XY inner size compensation"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__xy_size_compensation
+msgid "XY size compensation"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,help:web_slicing_profile.field_slicing_profile__wipe_tower_y
+msgid ""
+"Y coordinate of the left front corner of a wipe tower (mm, default: 140)"
+msgstr ""
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__z_offset
+msgid "Z offset"
+msgstr "Décalage Z"
+
+#. module: web_slicing_profile
+#: model:ir.model.fields,field_description:web_slicing_profile.field_slicing_profile__z_step
+msgid "Z step"
+msgstr ""
