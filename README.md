@@ -2,6 +2,8 @@
 
 Compatible with Odoo 12
 
+This project is work in progress, not ready for production.
+
 ---
 
 ![](web_mainsail_klipper/static/description/icon.png)
