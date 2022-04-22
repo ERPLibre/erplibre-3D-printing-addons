@@ -23,7 +23,7 @@
     ],
     "external_dependencies": {
         "python": [
-            "requests", "os", "orjson", "re", "math", "datetime"
+            "requests", "orjson"
         ]
     },
     "installable": True,

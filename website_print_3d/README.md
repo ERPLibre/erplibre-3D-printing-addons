@@ -22,8 +22,4 @@ This module contains 2 models :
 - **External**
   - Python
     - _requests_
-    - _os_
     - _orjson_
-    - _re_
-    - _math_
-    - _datetime_
