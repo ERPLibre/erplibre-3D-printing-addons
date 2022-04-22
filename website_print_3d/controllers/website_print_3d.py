@@ -1,4 +1,4 @@
-import math
+# import math
 from os.path import splitext, join
 
 import orjson
@@ -7,7 +7,7 @@ import os
 
 import requests as requests
 
-from ..gcode_analyser.gcode_analyzer import Analyzer
+# from ..gcode_analyser.gcode_analyzer import Analyzer
 from odoo.http import Controller, route, request
 
 _logger = logging.getLogger(__name__)

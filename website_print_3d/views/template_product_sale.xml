@@ -11,7 +11,6 @@
         <xpath expr="//h4[hasclass('oe_price_h4')]//b[1]" position="replace">
             <b class="oe_price" style="white-space: nowrap;" t-esc="combination_info['price']"
                t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
-            /
             <span t-field="product.uom_id.name"/>
         </xpath>
     </template>
@@ -21,7 +20,6 @@
             <span t-field="line.price_reduce_taxexcl" style="white-space: nowrap;"
                   t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"
                   groups="account.group_show_line_subtotals_tax_excluded"/>
-            /
             <span t-field="line.product_id.uom_id.name"/>
         </xpath>
     </template>
