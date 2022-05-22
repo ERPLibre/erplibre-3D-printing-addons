@@ -1,0 +1,4 @@
+tornado==6.1
+orjson==3.6.0
+redis==3.5.3
+configparser==5.0.2
