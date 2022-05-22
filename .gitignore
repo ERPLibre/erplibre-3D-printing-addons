@@ -1,2 +1,9 @@
 *.pyc
 *.swp
+/superslicer_server_api/files/amfs/*
+/superslicer_server_api/files/configs_tmp/*
+/superslicer_server_api/files/gcodes/*
+/superslicer_server_api/files/objs/*
+/superslicer_server_api/files/stls/*
+/superslicer_server_api/venv/
+/superslicer_server_api/.idea/
