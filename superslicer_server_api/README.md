@@ -2,7 +2,7 @@
 
 ---
 
-The API server for accessing SuperSlicer from the web. It allows slice a 3D model with specific settings passed as a JSON, 
+The API server for accessing SuperSlicer from the web. It is the possible to slice a 3D model with specific settings passed as a JSON and to 
 download the G-code file result. This is a basic server that runs from the command line (not as a service). One can create
 a service to use the **_run.sh_** script file.
 
