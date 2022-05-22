@@ -12,7 +12,7 @@ a service to use the **_run.sh_** script file.
 
 1. Download the folder or clone the repository
    1. ``` 
-       git clone https://DOMAIN/superslicer_sever.git 
+       git clone https://DOMAIN/superslicer_sever_api.git 
       ```
 2. Run the installation script located in the **scripts** directory
    1. ```
